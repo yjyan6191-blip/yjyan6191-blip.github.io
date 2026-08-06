@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yujie Yan — PhD Candidate, Fudan University</title>
+<meta name="description" content="Yujie Yan is a PhD candidate at Fudan University working on high-level synthesis, design space exploration and machine learning for electronic design automation. Currently a visiting PhD student at the University of Edinburgh.">
+<meta name="keywords" content="Yujie Yan, High-Level Synthesis, HLS, EDA, Design Space Exploration, Fudan University, University of Edinburgh, FPGA">
+<meta property="og:title" content="Yujie Yan — PhD Candidate, Fudan University">
+<meta property="og:description" content="High-Level Synthesis, Design Space Exploration, and Machine Learning for EDA.">
+<meta property="og:type" content="profile">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚙️</text></svg>">
+<style>
+:root{
+  --bg:#ffffff;
+  --bg-soft:#f6f7f9;
+  --text:#1a1d21;
+  --text-soft:#5a6270;
+  --line:#e3e6ea;
+  --accent:#1d4ed8;
+  --accent-soft:#eef2ff;
+  --maxw:830px;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0f1115; --bg-soft:#171a20; --text:#e8eaed;
+    --text-soft:#9aa3b2; --line:#262b33; --accent:#7ea2ff; --accent-soft:#1a2036;
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue","PingFang SC","Microsoft YaHei",Arial,sans-serif;
+  font-size:16.5px;line-height:1.7;-webkit-font-smoothing:antialiased;
+}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+
+nav{position:sticky;top:0;z-index:50;
+  background:color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line);}
+.nav-inner{max-width:var(--maxw);margin:0 auto;padding:12px 24px;
+  display:flex;align-items:center;gap:4px;flex-wrap:wrap;}
+.nav-name{font-weight:650;margin-right:auto;letter-spacing:-.01em}
+.nav-inner a{color:var(--text-soft);font-size:14.5px;padding:5px 10px;border-radius:7px}
+.nav-inner a:hover{color:var(--text);background:var(--bg-soft);text-decoration:none}
+
+main{max-width:var(--maxw);margin:0 auto;padding:0 24px 96px}
+section{padding-top:52px}
+h1{font-size:33px;line-height:1.25;margin:0 0 6px;letter-spacing:-.02em}
+h1 .cn{font-size:20px;font-weight:500;color:var(--text-soft);letter-spacing:.04em;margin-left:8px}
+h2{font-size:14px;text-transform:uppercase;letter-spacing:.09em;color:var(--text-soft);
+  font-weight:650;margin:0 0 18px;padding-bottom:9px;border-bottom:1px solid var(--line);}
+h3{font-size:17px;margin:0 0 3px;font-weight:640}
+p{margin:0 0 14px}
+
+.hero{display:flex;gap:32px;align-items:flex-start;padding-top:56px;flex-wrap:wrap}
+.hero-text{flex:1;min-width:270px}
+.avatar{width:150px;height:150px;border-radius:14px;object-fit:cover;
+  border:1px solid var(--line);background:var(--bg-soft);flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+  color:var(--text-soft);font-size:12.5px;text-align:center;padding:10px;line-height:1.5}
+.role{color:var(--text-soft);font-size:16.5px;margin:0 0 14px;line-height:1.55}
+.tagline{margin-bottom:18px}
+.links{display:flex;flex-wrap:wrap;gap:8px}
+.links a{display:inline-flex;align-items:center;gap:6px;font-size:14px;padding:6px 13px;
+  border-radius:999px;border:1px solid var(--line);color:var(--text-soft);background:var(--bg-soft)}
+.links a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+.links a.primary{background:var(--accent-soft);border-color:transparent;color:var(--accent);font-weight:600}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.card{border:1px solid var(--line);border-radius:12px;padding:16px 18px;background:var(--bg-soft)}
+.card h3{font-size:15.5px;margin-bottom:6px}
+.card p{font-size:14.5px;color:var(--text-soft);margin:0;line-height:1.62}
+
+.pub{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
+.pub:last-child{border-bottom:none}
+.pub-year{font-variant-numeric:tabular-nums;color:var(--text-soft);font-size:14px;
+  flex-shrink:0;width:46px;padding-top:2px}
+.pub-body{flex:1;min-width:0}
+.pub-title{font-weight:600;margin:0 0 3px;line-height:1.45}
+.pub-authors{font-size:14.5px;color:var(--text-soft);margin:0 0 3px}
+.pub-authors .me{color:var(--text);font-weight:640}
+.pub-venue{font-size:14px;color:var(--text-soft);font-style:italic;margin:0}
+.pub-links{margin-top:6px;display:flex;gap:12px;flex-wrap:wrap}
+.pub-links a{font-size:13px}
+.badge{display:inline-block;font-size:11.5px;font-weight:650;letter-spacing:.03em;
+  padding:1px 7px;border-radius:5px;background:var(--accent-soft);color:var(--accent);
+  vertical-align:2px;margin-left:6px}
+
+.item{display:flex;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item-date{font-variant-numeric:tabular-nums;color:var(--text-soft);font-size:14px;
+  flex-shrink:0;width:118px;padding-top:2px}
+.item-body{flex:1;min-width:0}
+.item-body .where{color:var(--text-soft);font-size:14.5px;margin:0}
+.item-body ul{margin:7px 0 0;padding-left:18px;color:var(--text-soft);font-size:14.5px}
+.item-body li{margin-bottom:3px}
+
+.skills{display:grid;grid-template-columns:118px 1fr;gap:6px 16px;font-size:15px}
+.skills dt{color:var(--text-soft);font-size:14px}
+.skills dd{margin:0}
+
+footer{border-top:1px solid var(--line);margin-top:64px;padding:22px 24px;
+  text-align:center;color:var(--text-soft);font-size:13.5px}
+
+@media (max-width:620px){
+  h1{font-size:28px}
+  h1 .cn{display:block;margin:2px 0 0}
+  .hero{gap:22px}
+  .avatar{width:112px;height:112px}
+  .pub-year,.item-date{width:100%;padding-top:0}
+  .pub,.item{flex-direction:column;gap:4px}
+  .skills{grid-template-columns:1fr;gap:2px 0}
+  .skills dd{margin-bottom:10px}
+  .nav-inner{padding:10px 18px}
+  main{padding:0 18px 72px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <span class="nav-name">Yujie Yan</span>
+    <a href="#about">About</a>
+    <a href="#research">Research</a>
+    <a href="#publications">Publications</a>
+    <a href="#experience">Experience</a>
+    <a href="#awards">Awards</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <div class="avatar" id="avatar">照片放这里<br>上传 assets/photo.jpg<br>会自动替换</div>
+    <div class="hero-text">
+      <h1>Yujie Yan<span class="cn">严宇杰</span></h1>
+      <p class="role">
+        PhD Candidate, School of Microelectronics, Fudan University<br>
+        Visiting PhD Student, School of Informatics, University of Edinburgh
+      </p>
+      <p class="tagline">
+        I build <strong>learning-based optimization for EDA tools</strong> — teaching
+        high-level synthesis to explore its own design space, so that automatically
+        generated hardware can match what an expert would write by hand.
+      </p>
+      <div class="links">
+        <a class="primary" href="assets/CV.pdf">CV (PDF)</a>
+        <a href="mailto:yjyan21@m.fudan.edu.cn">Email</a>
+        <a href="https://scholar.google.com/citations?user=YOUR_ID">Google Scholar</a>
+        <a href="https://github.com/YOUR_USERNAME">GitHub</a>
+        <a href="https://www.linkedin.com/in/YOUR_USERNAME">LinkedIn</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about">
+    <h2>About</h2>
+    <p>
+      I am a PhD candidate in Integrated Circuit and Systems Design at
+      <a href="https://www.fudan.edu.cn/en/">Fudan University</a>, based in the
+      State Key Laboratory of Integrated Chips and Systems and advised by
+      Prof. <a href="https://krz.engineer/">Keren Zhu</a>. I am currently a visiting
+      PhD student at the <a href="https://informatics.ed.ac.uk/">School of Informatics</a>,
+      University of Edinburgh, hosted by Dr.
+      <a href="https://jianyicheng.github.io/">Jianyi Cheng</a>.
+    </p>
+    <p>
+      My research is on <strong>electronic design automation (EDA)</strong>, and
+      specifically on making <strong>high-level synthesis (HLS)</strong> smarter. HLS
+      compiles C/C++ into RTL, but its quality still lags behind hand-written designs:
+      the design space is combinatorially huge, optimization stages are siloed, and the
+      compiler is blind to the downstream tools and the target architecture. I work on
+      learnable cost models and search strategies that close this gap — combining
+      Bayesian optimization, graph neural networks, and more recently large language
+      models that read the source code the way a hardware engineer would.
+    </p>
+    <p>
+      My work is developed in close collaboration with industry, including
+      Shanghai Fudan Microelectronics and UniVista Industrial Software, which gives it
+      real production designs and toolchains to be validated against.
+    </p>
+    <p>
+      I expect to graduate in <strong>[毕业年份，如 2027]</strong> and am
+      <strong>looking for [研究实习 / 工业界研发岗位 / 博士后]</strong> in EDA,
+      compilers, and machine learning for hardware design. I am always happy to
+      talk about HLS — feel free to <a href="#contact">get in touch</a>.
+    </p>
+  </section>
+
+  <!-- ============ RESEARCH ============ -->
+  <section id="research">
+    <h2>Research Interests</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Design Space Exploration for HLS</h3>
+        <p>Learning-based search over pragmas and directives — Bayesian optimization
+           and multi-model cost estimation to find high-quality latency/area trade-offs
+           without exhaustive synthesis.</p>
+      </div>
+      <div class="card">
+        <h3>LLMs for Hardware Design</h3>
+        <p>Using large language models to read HLS source code semantically, guide the
+           search, and automatically repair or rewrite designs — bringing code-level
+           understanding into a traditionally numeric optimization loop.</p>
+      </div>
+      <div class="card">
+        <h3>Architecture-Aware EDA</h3>
+        <p>Cross-stage co-optimization from HLS through logic synthesis to place-and-route,
+           making early decisions aware of downstream tools and the target architecture
+           (FPGA, and beyond).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PUBLICATIONS ============ -->
+  <section id="publications">
+    <h2>Publications</h2>
+
+    <div class="pub">
+      <div class="pub-year">2026</div>
+      <div class="pub-body">
+        <p class="pub-title">LENS-HLS: LLM-Enhanced Learning-based Design Space Exploration for High-Level Synthesis</p>
+        <p class="pub-authors"><span class="me">Yujie Yan</span>, Guanglei Chen, Keren Zhu</p>
+        <p class="pub-venue">IEEE 34th Annual International Symposium on Field-Programmable Custom Computing Machines (FCCM), Atlanta, GA, USA, 2026, pp. 272.</p>
+        <div class="pub-links">
+          <a href="https://doi.org/10.1109/FCCM68464.2026.00060">DOI</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-year">2026</div>
+      <div class="pub-body">
+        <p class="pub-title">HOLMES: Hierarchical Optimization with poLygonal ModEling for Large-Scale AMS Placement</p>
+        <p class="pub-authors">Guanglei Chen, <span class="me">Yujie Yan</span>, et al.</p>
+        <p class="pub-venue">IEEE International Symposium on Circuits and Systems (ISCAS), Shanghai, China, 2026, pp. 75–79.</p>
+        <div class="pub-links">
+          <a href="https://doi.org/10.1109/ISCAS66217.2026.11563028">DOI</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-year">2025</div>
+      <div class="pub-body">
+        <p class="pub-title">HOLMES-HLS: Holistic Optimization and Learning-based Multi-model Exploration System for High-Level Synthesis</p>
+        <p class="pub-authors"><span class="me">Yujie Yan</span>, et al.</p>
+        <p class="pub-venue">International Conference on Field Programmable Technology (ICFPT), Shanghai, China, 2025, pp. 217–218.</p>
+        <div class="pub-links">
+          <a href="https://doi.org/10.1109/ICFPT67023.2025.00037">DOI</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section id="experience">
+    <h2>Education &amp; Experience</h2>
+
+    <div class="item">
+      <div class="item-date">2026.03 – 2027.02</div>
+      <div class="item-body">
+        <h3>Visiting PhD Student</h3>
+        <p class="where">School of Informatics, University of Edinburgh · Host: Dr. Jianyi Cheng</p>
+        <ul><li>Architecture-aware automated optimization for EDA tools, funded by the China Scholarship Council.</li></ul>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-date">2021.09 – present</div>
+      <div class="item-body">
+        <h3>PhD in Integrated Circuit and Systems Design</h3>
+        <p class="where">Fudan University · Advisor: Prof. Keren Zhu · Direct-entry PhD (admitted by recommendation)</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-date">2021.07 – 2021.09</div>
+      <div class="item-body">
+        <h3>EDA Software Development Intern</h3>
+        <p class="where">Shanghai Fudan Microelectronics Group</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-date">2019.07 – 2019.09</div>
+      <div class="item-body">
+        <h3>Summer Research Programme, AI &amp; Machine Learning</h3>
+        <p class="where">University of Manchester, UK</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-date">2017.09 – 2021.06</div>
+      <div class="item-body">
+        <h3>BEng in Integrated Circuit Design and Integrated Systems</h3>
+        <p class="where">Huazhong University of Science and Technology · GPA 3.94/4.0, ranked 5th in programme</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section id="projects">
+    <h2>Selected Projects</h2>
+    <div class="item">
+      <div class="item-body">
+        <h3>LLM-Based Automatic Code Repair for Hardware Design</h3>
+        <p class="where">Industry collaboration with UniVista Industrial Software</p>
+        <ul><li>Large language models applied to automatically detect and repair defects in circuit design code.</li></ul>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item-body">
+        <h3>FPGA Accelerator for LeNet-5</h3>
+        <p class="where">Verilog HDL · AMD Xilinx Vivado</p>
+        <ul><li>End-to-end hardware implementation of a convolutional neural network on FPGA.</li></ul>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item-body">
+        <h3>Hardware Implementation of the VESA DSC 1.2 Video Stream Standard</h3>
+        <p class="where">High-Level Synthesis</p>
+        <ul><li>Full display stream compression pipeline implemented and optimized through HLS.</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ AWARDS ============ -->
+  <section id="awards">
+    <h2>Awards &amp; Honours</h2>
+
+    <div class="item">
+      <div class="item-date">2024</div>
+      <div class="item-body">
+        <h3>2nd Place, Machine Learning Contest for Chip Design with HLS</h3>
+        <p class="where">Global competition hosted by UCLA</p>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item-date">2021</div>
+      <div class="item-body">
+        <h3>Outstanding Graduate</h3>
+        <p class="where">Huazhong University of Science and Technology</p>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item-date">2020</div>
+      <div class="item-body">
+        <h3>National Excellence Award, China Undergraduate IC Innovation and Entrepreneurship Competition</h3>
+        <p class="where">National level</p>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item-date">2020</div>
+      <div class="item-body">
+        <h3>Meritorious Winner, Mathematical Contest in Modeling (MCM/ICM)</h3>
+        <p class="where">COMAP, USA</p>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item-date">2019 – 2021</div>
+      <div class="item-body">
+        <h3>Principal Investigator, Provincial Undergraduate Innovation and Entrepreneurship Training Programme</h3>
+        <p class="where">Hubei Province</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <dl class="skills">
+      <dt>Languages</dt><dd>C/C++, Python, Verilog HDL</dd>
+      <dt>EDA / HLS</dt><dd>AMD Xilinx Vitis HLS, Vivado</dd>
+      <dt>ML</dt><dd>PyTorch, Bayesian optimization, graph neural networks, LLM fine-tuning &amp; prompting</dd>
+    </dl>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>
+      Email · <a href="mailto:yjyan21@m.fudan.edu.cn">yjyan21@m.fudan.edu.cn</a>
+      &nbsp;|&nbsp; <a href="mailto:yjyan6191@gmail.com">yjyan6191@gmail.com</a><br>
+      Currently based in Edinburgh, UK &nbsp;·&nbsp; Home institution: Fudan University, Shanghai, China
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  © <span id="year">2026</span> Yujie Yan · Last updated: August 2026
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  (function(){
+    var box = document.getElementById('avatar'), img = new Image();
+    img.onload = function(){ box.outerHTML = '<img class="avatar" src="assets/photo.jpg" alt="Yujie Yan">'; };
+    img.src = 'assets/photo.jpg';
+  })();
+</script>
+
+</body>
+</html>
