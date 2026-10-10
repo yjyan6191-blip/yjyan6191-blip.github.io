@@ -1,414 +1,613 @@
 <!DOCTYPE html>
 <html lang="en">
+<!--
+============================================================
+ 严宇杰 · 个人主页（GitHub Pages）   更新：2026-10
+============================================================
+ 怎么改：1. 文字：每段中英文成对出现class="en" → 英文版显示的内容class="zh" → 中文版显示的内容改完两个都要改，否则切换语言时会缺内容。2. 照片放在 assets/photo.jpg（建议正方形，≥ 400×400）3. 简历放在 assets/CV.pdf（建议放英文版）；文件不存在时“CV”按钮会自动隐藏4. Google Scholar / GitHub / LinkedIn：在下方“联系方式”里把注释去掉、换成自己的链接5. 内容来源：2026秋招简历/00_个人信息数据库.md；新论文接收后，在“论文”和“动态”两处各加一条注意：- 手机号不放在公开网页上；邮箱以爱丁堡邮箱为主- DATE 2027 投稿处于双盲评审期，暂不在公开网页列出题目；接收后再加- 页面不依赖任何外部字体或 CDN，国内访问也能秒开
+============================================================
+-->
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Yujie Yan — PhD Candidate, Fudan University</title>
-<meta name="description" content="Yujie Yan is a PhD candidate at Fudan University working on high-level synthesis, design space exploration and machine learning for electronic design automation. Currently a visiting PhD student at the University of Edinburgh.">
-<meta name="keywords" content="Yujie Yan, High-Level Synthesis, HLS, EDA, Design Space Exploration, Fudan University, University of Edinburgh, FPGA">
-<meta property="og:title" content="Yujie Yan — PhD Candidate, Fudan University">
-<meta property="og:description" content="High-Level Synthesis, Design Space Exploration, and Machine Learning for EDA.">
-<meta property="og:type" content="profile">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yujie Yan · 严宇杰</title>
+<meta name="description" content="Yujie Yan (严宇杰) — PhD candidate at Fudan University and visiting PhD student at the University of Edinburgh. Learning-based design automation: high-level synthesis, AI for EDA, LLMs for hardware design and verification.">
+<meta name="author" content="Yujie Yan">
+<meta property="og:title" content="Yujie Yan · 严宇杰">
+<meta property="og:description" content="High-level synthesis · AI for EDA · LLMs for hardware design and verification">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚙️</text></svg>">
 <style>
-:root{
-  --bg:#ffffff;
-  --bg-soft:#f6f7f9;
-  --text:#1a1d21;
-  --text-soft:#5a6270;
-  --line:#e3e6ea;
-  --accent:#1d4ed8;
-  --accent-soft:#eef2ff;
-  --maxw:830px;
-}
-@media (prefers-color-scheme: dark){
-  :root{
-    --bg:#0f1115; --bg-soft:#171a20; --text:#e8eaed;
-    --text-soft:#9aa3b2; --line:#262b33; --accent:#7ea2ff; --accent-soft:#1a2036;
+  :root {
+    --bg: #ffffff;
+    --bg-soft: #f5f7fa;
+    --card: #ffffff;
+    --text: #1f2328;
+    --muted: #5b6573;
+    --line: #e3e7ed;
+    --accent: #0060a8;
+    --accent-soft: #e8f1fa;
+    --tag-bg: #eef2f6;
+    --shadow: 0 1px 2px rgba(16, 24, 40, .04), 0 1px 3px rgba(16, 24, 40, .06);
+    --radius: 10px;
+    --maxw: 980px;
+    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial,
+            "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
   }
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:70px}
-body{
-  margin:0;background:var(--bg);color:var(--text);
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue","PingFang SC","Microsoft YaHei",Arial,sans-serif;
-  font-size:16.5px;line-height:1.7;-webkit-font-smoothing:antialiased;
-}
-a{color:var(--accent);text-decoration:none}
-a:hover{text-decoration:underline}
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0f1419; --bg-soft: #151b22; --card: #171e26; --text: #e6e9ee; --muted: #9aa5b4;
+      --line: #263040; --accent: #5aa9ec; --accent-soft: #15283b; --tag-bg: #1e2733;
+      --shadow: none;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0f1419; --bg-soft: #151b22; --card: #171e26; --text: #e6e9ee; --muted: #9aa5b4;
+    --line: #263040; --accent: #5aa9ec; --accent-soft: #15283b; --tag-bg: #1e2733;
+    --shadow: none;
+  }
 
-nav{position:sticky;top:0;z-index:50;
-  background:color-mix(in srgb, var(--bg) 88%, transparent);
-  backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line);}
-.nav-inner{max-width:var(--maxw);margin:0 auto;padding:12px 24px;
-  display:flex;align-items:center;gap:4px;flex-wrap:wrap;}
-.nav-name{font-weight:650;margin-right:auto;letter-spacing:-.01em}
-.nav-inner a{color:var(--text-soft);font-size:14.5px;padding:5px 10px;border-radius:7px}
-.nav-inner a:hover{color:var(--text);background:var(--bg-soft);text-decoration:none}
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+  body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--font);
+         font-size: 16px; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  b, strong { font-weight: 600; }
 
-main{max-width:var(--maxw);margin:0 auto;padding:0 24px 96px}
-section{padding-top:52px}
-h1{font-size:33px;line-height:1.25;margin:0 0 6px;letter-spacing:-.02em}
-h1 .cn{font-size:20px;font-weight:500;color:var(--text-soft);letter-spacing:.04em;margin-left:8px}
-h2{font-size:14px;text-transform:uppercase;letter-spacing:.09em;color:var(--text-soft);
-  font-weight:650;margin:0 0 18px;padding-bottom:9px;border-bottom:1px solid var(--line);}
-h3{font-size:17px;margin:0 0 3px;font-weight:640}
-p{margin:0 0 14px}
+  /* language switch: show only the active language */
+  html[lang="en"] .zh, html[lang="zh"] .en { display: none !important; }
 
-.hero{display:flex;gap:32px;align-items:flex-start;padding-top:56px;flex-wrap:wrap}
-.hero-text{flex:1;min-width:270px}
-.avatar{width:150px;height:150px;border-radius:14px;object-fit:cover;
-  border:1px solid var(--line);background:var(--bg-soft);flex-shrink:0;
-  display:flex;align-items:center;justify-content:center;
-  color:var(--text-soft);font-size:12.5px;text-align:center;padding:10px;line-height:1.5}
-.role{color:var(--text-soft);font-size:16.5px;margin:0 0 14px;line-height:1.55}
-.tagline{margin-bottom:18px}
-.links{display:flex;flex-wrap:wrap;gap:8px}
-.links a{display:inline-flex;align-items:center;gap:6px;font-size:14px;padding:6px 13px;
-  border-radius:999px;border:1px solid var(--line);color:var(--text-soft);background:var(--bg-soft)}
-.links a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
-.links a.primary{background:var(--accent-soft);border-color:transparent;color:var(--accent);font-weight:600}
+  /* ---------- nav ---------- */
+  .nav { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--bg) 88%, transparent);
+         backdrop-filter: saturate(160%) blur(10px); -webkit-backdrop-filter: saturate(160%) blur(10px);
+         border-bottom: 1px solid var(--line); }
+  .nav-inner { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; height: 56px;
+               display: flex; align-items: center; gap: 18px; }
+  .brand { font-weight: 700; color: var(--text); white-space: nowrap; }
+  .brand:hover { text-decoration: none; }
+  .nav-links { display: flex; gap: 4px; margin-left: auto; overflow-x: auto; scrollbar-width: none; }
+  .nav-links::-webkit-scrollbar { display: none; }
+  .nav-links a { color: var(--muted); padding: 6px 10px; border-radius: 6px; font-size: 14.5px; white-space: nowrap; }
+  .nav-links a:hover, .nav-links a.active { color: var(--accent); background: var(--accent-soft); text-decoration: none; }
+  .btn-ghost { border: 1px solid var(--line); background: var(--card); color: var(--text); border-radius: 6px;
+               padding: 5px 10px; font: inherit; font-size: 13.5px; cursor: pointer; white-space: nowrap; }
+  .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+  .nav-tools { display: flex; gap: 6px; }
+  .btn-ghost.icon { display: inline-flex; align-items: center; justify-content: center; padding: 5px 8px; }
 
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
-.card{border:1px solid var(--line);border-radius:12px;padding:16px 18px;background:var(--bg-soft)}
-.card h3{font-size:15.5px;margin-bottom:6px}
-.card p{font-size:14.5px;color:var(--text-soft);margin:0;line-height:1.62}
+  main { max-width: var(--maxw); margin: 0 auto; padding: 0 20px 56px; }
+  section { padding-top: 44px; }
+  h2 { font-size: 22px; margin: 0 0 18px; padding-bottom: 8px; border-bottom: 2px solid var(--line);
+       display: flex; align-items: baseline; gap: 10px; }
+  h2 .sub { font-size: 14px; color: var(--muted); font-weight: 400; }
+  h3 { font-size: 16px; margin: 22px 0 10px; color: var(--muted); font-weight: 600; letter-spacing: .02em; }
 
-.pub{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
-.pub:last-child{border-bottom:none}
-.pub-year{font-variant-numeric:tabular-nums;color:var(--text-soft);font-size:14px;
-  flex-shrink:0;width:46px;padding-top:2px}
-.pub-body{flex:1;min-width:0}
-.pub-title{font-weight:600;margin:0 0 3px;line-height:1.45}
-.pub-authors{font-size:14.5px;color:var(--text-soft);margin:0 0 3px}
-.pub-authors .me{color:var(--text);font-weight:640}
-.pub-venue{font-size:14px;color:var(--text-soft);font-style:italic;margin:0}
-.pub-links{margin-top:6px;display:flex;gap:12px;flex-wrap:wrap}
-.pub-links a{font-size:13px}
-.badge{display:inline-block;font-size:11.5px;font-weight:600;letter-spacing:.03em;
-  padding:1px 7px;border-radius:5px;background:var(--bg-soft);color:var(--text-soft);
-  border:1px solid var(--line);vertical-align:2px;margin-left:7px}
-.badge.hl{background:var(--accent-soft);color:var(--accent);border-color:transparent;font-weight:650}
+  /* ---------- hero ---------- */
+  .hero { display: grid; grid-template-columns: 1fr 200px; gap: 36px; align-items: center; padding-top: 44px; }
+  .hero h1 { font-size: 36px; line-height: 1.2; margin: 0 0 6px; letter-spacing: .01em; }
+  .hero h1 .cn { font-size: 24px; color: var(--muted); font-weight: 500; margin-left: 10px; }
+  .roles { color: var(--muted); margin: 0 0 14px; font-size: 15.5px; }
+  .tagline { font-size: 17px; margin: 0 0 16px; }
+  .callout { background: var(--accent-soft); border-left: 3px solid var(--accent); padding: 10px 14px;
+             border-radius: 0 8px 8px 0; font-size: 15px; margin: 0 0 18px; }
+  .links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .links a { display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; border-radius: 999px;
+             border: 1px solid var(--line); background: var(--card); color: var(--text); font-size: 14.5px; box-shadow: var(--shadow); }
+  .links a:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+  .links a.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .links a.primary:hover { filter: brightness(1.08); color: #fff; }
+  .links svg { width: 16px; height: 16px; fill: currentColor; }
+  .photo-box { text-align: center; }
+  .photo-box img { width: 200px; height: 200px; object-fit: cover; border-radius: 50%;
+                   border: 4px solid var(--card); box-shadow: 0 4px 18px rgba(0, 0, 0, .12); background: var(--bg-soft); }
+  .address { font-size: 13.5px; color: var(--muted); margin-top: 12px; line-height: 1.5; }
 
-.item{display:flex;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
-.item:last-child{border-bottom:none}
-.item-date{font-variant-numeric:tabular-nums;color:var(--text-soft);font-size:14px;
-  flex-shrink:0;width:118px;padding-top:2px}
-.item-body{flex:1;min-width:0}
-.item-body .where{color:var(--text-soft);font-size:14.5px;margin:0}
-.item-body ul{margin:7px 0 0;padding-left:18px;color:var(--text-soft);font-size:14.5px}
-.item-body li{margin-bottom:3px}
+  /* ---------- about ---------- */
+  .about p { margin: 0 0 12px; }
 
-.skills{display:grid;grid-template-columns:118px 1fr;gap:6px 16px;font-size:15px}
-.skills dt{color:var(--text-soft);font-size:14px}
-.skills dd{margin:0}
+  /* ---------- news ---------- */
+  .news { list-style: none; margin: 0; padding: 0; }
+  .news li { display: grid; grid-template-columns: 84px 1fr; gap: 14px; padding: 7px 0; border-bottom: 1px dashed var(--line); }
+  .news li:last-child { border-bottom: 0; }
+  .news .date { color: var(--accent); font-weight: 600; font-variant-numeric: tabular-nums; font-size: 14.5px; padding-top: 1px; }
 
-footer{border-top:1px solid var(--line);margin-top:64px;padding:22px 24px;
-  text-align:center;color:var(--text-soft);font-size:13.5px}
+  /* ---------- cards ---------- */
+  .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px 18px; box-shadow: var(--shadow); }
+  .card h4 { margin: 0 0 6px; font-size: 16px; }
+  .card p { margin: 0; color: var(--muted); font-size: 15px; }
 
-@media (max-width:620px){
-  h1{font-size:28px}
-  h1 .cn{display:block;margin:2px 0 0}
-  .hero{gap:22px}
-  .avatar{width:112px;height:112px}
-  .pub-year,.item-date{width:100%;padding-top:0}
-  .pub,.item{flex-direction:column;gap:4px}
-  .skills{grid-template-columns:1fr;gap:2px 0}
-  .skills dd{margin-bottom:10px}
-  .nav-inner{padding:10px 18px}
-  main{padding:0 18px 72px}
-}
+  /* ---------- projects ---------- */
+  .project { padding: 14px 0; border-bottom: 1px solid var(--line); }
+  .project:last-child { border-bottom: 0; }
+  .project-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 10px; margin-bottom: 4px; }
+  .project-head h4 { margin: 0; font-size: 16.5px; }
+  .project p { margin: 4px 0 0; font-size: 15.5px; }
+  .metrics { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+  .metric { background: var(--bg-soft); border: 1px solid var(--line); border-radius: 8px; padding: 4px 10px; font-size: 13.5px; }
+  .metric b { color: var(--accent); }
+
+  /* ---------- tags ---------- */
+  .tag { display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: .02em; padding: 2px 8px;
+         border-radius: 5px; background: var(--tag-bg); color: var(--muted); vertical-align: 2px; white-space: nowrap; }
+  .tag.venue { background: var(--accent); color: #fff; min-width: 92px; text-align: center; }
+  .tag.ok { background: #e6f4ea; color: #1e7b34; }
+  .tag.wip { background: #fff4e0; color: #9a5b00; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .tag.ok { background: #183223; color: #7fd197; }
+                                        :root:not([data-theme="light"]) .tag.wip { background: #33270f; color: #f0b960; } }
+  :root[data-theme="dark"] .tag.ok { background: #183223; color: #7fd197; }
+  :root[data-theme="dark"] .tag.wip { background: #33270f; color: #f0b960; }
+
+  /* ---------- publications ---------- */
+  .pubs { list-style: none; margin: 0; padding: 0; }
+  .pub { display: grid; grid-template-columns: 104px 1fr; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+  .pub:last-child { border-bottom: 0; }
+  .pub .title { font-weight: 600; }
+  .pub .authors, .pub .where { font-size: 14.5px; color: var(--muted); }
+  .pub .authors b { color: var(--text); }
+  .pub .where i { font-style: italic; }
+  .pub .acts { margin-top: 4px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .pub .acts a { font-size: 13px; border: 1px solid var(--line); border-radius: 5px; padding: 1px 8px; }
+  .pub .acts a:hover { border-color: var(--accent); text-decoration: none; }
+
+  /* ---------- timeline ---------- */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+  .tl { list-style: none; margin: 0; padding: 0 0 0 18px; border-left: 2px solid var(--line); }
+  .tl li { position: relative; padding: 0 0 18px 14px; }
+  .tl li::before { content: ""; position: absolute; left: -25px; top: 7px; width: 10px; height: 10px; border-radius: 50%;
+                   background: var(--card); border: 2px solid var(--accent); }
+  .tl .when { font-size: 13.5px; color: var(--accent); font-weight: 600; font-variant-numeric: tabular-nums; }
+  .tl .what { font-weight: 600; }
+  .tl .where, .tl .detail { font-size: 14.5px; color: var(--muted); }
+
+  /* ---------- awards / skills ---------- */
+  .awards { list-style: none; margin: 0; padding: 0; }
+  .awards li { display: grid; grid-template-columns: 84px 1fr; gap: 14px; padding: 7px 0; border-bottom: 1px dashed var(--line); }
+  .awards li:last-child { border-bottom: 0; }
+  .awards .year { color: var(--accent); font-weight: 600; font-size: 14.5px; font-variant-numeric: tabular-nums; }
+  .awards .org { color: var(--muted); font-size: 14px; }
+  .skills { display: grid; grid-template-columns: 170px 1fr; gap: 8px 16px; margin: 0; }
+  .skills dt { font-weight: 600; }
+  .skills dd { margin: 0; color: var(--muted); }
+
+  footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 13.5px; text-align: center; padding: 22px 20px 30px; }
+
+  /* ---------- responsive ---------- */
+  @media (max-width: 760px) {
+    .hero { grid-template-columns: 1fr; gap: 18px; padding-top: 28px; }
+    .photo-box { order: -1; }
+    .photo-box img { width: 140px; height: 140px; }
+    .hero h1 { font-size: 30px; }
+    .grid, .two-col { grid-template-columns: 1fr; }
+    .pub { grid-template-columns: 1fr; gap: 6px; }
+    .tag.venue { min-width: 0; }
+    .news li, .awards li { grid-template-columns: 70px 1fr; gap: 10px; }
+    .skills { grid-template-columns: 1fr; gap: 2px; }
+    .skills dd { margin-bottom: 8px; }
+    .brand .cn-brand { display: none; }
+  }
+  @media (max-width: 560px) {
+    .brand { display: none; }
+    .nav-links { margin-left: 0; }
+    .nav-inner { gap: 10px; padding: 0 16px; }
+    main { padding: 0 16px 48px; }
+  }
+  @media print {
+    .nav, .nav-tools { display: none; }
+    section { padding-top: 18px; }
+    a { color: inherit; }
+  }
 </style>
 </head>
 <body>
 
-<nav>
+<!-- ================= 导航 ================= -->
+<header class="nav">
   <div class="nav-inner">
-    <span class="nav-name">Yujie Yan</span>
-    <a href="#about">About</a>
-    <a href="#research">Research</a>
-    <a href="#publications">Publications</a>
-    <a href="#experience">Experience</a>
-    <a href="#awards">Awards</a>
-    <a href="#contact">Contact</a>
+    <a class="brand" href="#top">Yujie Yan<span class="cn-brand"> · 严宇杰</span></a>
+    <nav class="nav-links" aria-label="Sections">
+      <a href="#about"><span class="en">About</span><span class="zh">简介</span></a>
+      <a href="#news"><span class="en">News</span><span class="zh">动态</span></a>
+      <a href="#research"><span class="en">Research</span><span class="zh">研究</span></a>
+      <a href="#publications"><span class="en">Publications</span><span class="zh">论文</span></a>
+      <a href="#experience"><span class="en">Experience</span><span class="zh">经历</span></a>
+      <a href="#awards"><span class="en">Awards</span><span class="zh">荣誉</span></a>
+    </nav>
+    <div class="nav-tools">
+      <button class="btn-ghost" id="langBtn" type="button" aria-label="Switch language">中文</button>
+      <button class="btn-ghost icon" id="themeBtn" type="button" aria-label="Toggle dark mode" title="Light / Dark"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 2v16a8 8 0 0 1 0-16z"/></svg></button>
+    </div>
   </div>
-</nav>
+</header>
 
-<main>
+<main id="top">
 
-  <!-- ============ HERO ============ -->
-  <header class="hero">
-    <div class="avatar" id="avatar">照片放这里<br>上传 assets/photo.jpg<br>会自动替换</div>
-    <div class="hero-text">
+  <!-- ================= 首屏 ================= -->
+  <div class="hero">
+    <div>
       <h1>Yujie Yan<span class="cn">严宇杰</span></h1>
-      <p class="role">
-        PhD Candidate, College of Integrated Circuits and Micro-Nano Electronics, Fudan University<br>
-        Visiting PhD Student, School of Informatics, University of Edinburgh
+      <p class="roles">
+        <span class="en">PhD Candidate, College of Integrated Circuits and Micro-Nano Electronics, Fudan University<br>
+          Visiting PhD Student, School of Informatics, University of Edinburgh</span>
+        <span class="zh">博士研究生，复旦大学集成电路与微纳电子创新学院<br>
+          联合培养博士生，英国爱丁堡大学信息学院</span>
       </p>
       <p class="tagline">
-        I build <strong>learning-based optimization for EDA tools</strong> — teaching
-        high-level synthesis to explore its own design space, so that automatically
-        generated hardware can match what an expert would write by hand.
+        <span class="en">I build learning-based optimization for EDA tools — teaching high-level synthesis to explore its own
+          design space, and bringing large language models into hardware design and verification.</span>
+        <span class="zh">我研究面向 EDA 工具的学习式自动优化：让高层次综合学会自主探索设计空间，并把大语言模型引入硬件设计与验证。</span>
+      </p>
+      <!-- 求职提示：入职后删掉这一段即可 -->
+      <p class="callout">
+        <span class="en">🎓 I am on the job market for <b>2027</b> (PhD expected June 2027), looking for roles in
+          <b>AI compilers</b>, <b>AI for EDA</b> and <b>hardware–software co-design</b>.</span>
+        <span class="zh">🎓 我将于 <b>2027 年 6 月</b>博士毕业，正在寻找 <b>AI 编译器</b>、<b>AI for EDA</b>、<b>软硬件协同</b>方向的工作机会。</span>
       </p>
       <div class="links">
-        <a class="primary" href="assets/CV.pdf">CV (PDF)</a>
-        <a href="mailto:yjyan21@m.fudan.edu.cn">Email</a>
-        <!-- 以后有了 Google Scholar / GitHub / LinkedIn，把下面几行前后的注释符号删掉即可
-        <a href="https://scholar.google.com/citations?user=你的ID">Google Scholar</a>
-        <a href="https://github.com/你的用户名">GitHub</a>
-        <a href="https://www.linkedin.com/in/你的用户名">LinkedIn</a>
+        <a class="primary" id="cvLink" href="assets/CV.pdf" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm7 1.5V9h5.5L13 3.5zM8 13h8v1.6H8V13zm0 3.4h8V18H8v-1.6z"/></svg>
+          <span class="en">CV</span><span class="zh">简历</span></a>
+        <a href="mailto:y.yan-91@sms.ed.ac.uk">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 7.2L4 7.3V17h16V7.3l-8 4.9zM5.2 7l6.8 4.2L18.8 7H5.2z"/></svg>
+          <span class="en">Email</span><span class="zh">邮箱</span></a>
+        <!-- 有了以后去掉注释，并换成自己的链接
+        <a href="https://scholar.google.com/citations?user=你的ID" target="_blank" rel="noopener">Google Scholar</a>
+        <a href="https://github.com/yjyan6191-blip" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/你的用户名" target="_blank" rel="noopener">LinkedIn</a>
         -->
       </div>
     </div>
-  </header>
+    <div class="photo-box">
+      <img src="assets/photo.jpg" alt="Yujie Yan" width="200" height="200">
+      <div class="address">
+        <span class="en">Informatics Forum<br>University of Edinburgh<br>Edinburgh EH8 9AB, UK</span>
+        <span class="zh">英国爱丁堡大学<br>信息学院 Informatics Forum<br>Edinburgh EH8 9AB</span>
+      </div>
+    </div>
+  </div>
 
-  <!-- ============ ABOUT ============ -->
-  <section id="about">
-    <h2>About</h2>
-    <p>
-      I am a PhD candidate at the College of Integrated Circuits and Micro-Nano
-      Electronics, <a href="https://www.fudan.edu.cn/en/">Fudan University</a>, based in the
-      State Key Laboratory of Integrated Chips and Systems and advised by
-      Prof. <a href="https://krz.engineer/">Keren Zhu</a>. I am currently a visiting
-      PhD student at the <a href="https://informatics.ed.ac.uk/">School of Informatics</a>,
-      University of Edinburgh, hosted by Dr.
-      <a href="https://jianyicheng.github.io/">Jianyi Cheng</a>.
-    </p>
-    <p>
-      My research is on <strong>electronic design automation (EDA)</strong>, and
-      specifically on making <strong>high-level synthesis (HLS)</strong> smarter. HLS
-      compiles C/C++ into RTL, but its quality still lags behind hand-written designs:
-      the design space is combinatorially huge, optimization stages are siloed, and the
-      compiler is blind to the downstream tools and the target architecture. I work on
-      learnable cost models and search strategies that close this gap — combining
-      Bayesian optimization, graph neural networks, and more recently large language
-      models that read the source code the way a hardware engineer would.
-    </p>
-    <p>
-      My work is developed in close collaboration with industry, including
-      Shanghai Fudan Microelectronics and UniVista Industrial Software, which gives it
-      real production designs and toolchains to be validated against.
-    </p>
-    <p>
-      I expect to receive my PhD in <strong>2027</strong>. I am always happy to talk
-      about high-level synthesis, EDA, and machine learning for hardware design —
-      feel free to <a href="#contact">get in touch</a>.
-    </p>
+  <!-- ================= 简介 ================= -->
+  <section id="about" class="about">
+    <h2><span class="en">About</span><span class="zh">个人简介</span></h2>
+    <p class="en">I am a PhD candidate at the College of Integrated Circuits and Micro-Nano Electronics,
+      <a href="https://www.fudan.edu.cn/en/" target="_blank" rel="noopener">Fudan University</a>, in the State Key Laboratory of
+      Integrated Chips and Systems, advised by Prof. <a href="https://krz.engineer/" target="_blank" rel="noopener">Keren Zhu</a>.
+      Since April 2026 I have been a visiting PhD student at the
+      <a href="https://informatics.ed.ac.uk/" target="_blank" rel="noopener">School of Informatics, University of Edinburgh</a>,
+      hosted by Dr. <a href="https://jianyicheng.github.io/" target="_blank" rel="noopener">Jianyi Cheng</a> and funded by the China Scholarship Council.</p>
+    <p class="zh">我是<a href="https://www.fudan.edu.cn/" target="_blank" rel="noopener">复旦大学</a>集成电路与微纳电子创新学院的博士研究生，依托集成芯片与系统全国重点实验室，师从 <a href="https://krz.engineer/" target="_blank" rel="noopener">Keren Zhu</a> 教授。2026 年 4 月起，我作为国家公派联合培养博士生在<a href="https://informatics.ed.ac.uk/" target="_blank" rel="noopener">英国爱丁堡大学信息学院</a>访问，合作导师为 <a href="https://jianyicheng.github.io/" target="_blank" rel="noopener">Jianyi Cheng</a> 博士。</p>
+
+    <p class="en">My research asks how chip design automation can be done better. Starting from high-level synthesis (HLS),
+      I build learnable performance models and search strategies: LLM-enhanced multi-model surrogates with online Bayesian optimization
+      for highly nonlinear hardware performance (<b>HOLMES</b>), an LLM–BO hybrid search with credibility-aware filtering for
+      data-scarce exploration (<b>LENS</b>), and LLM-driven source transformation that automates dataflow floorplanning on
+      multi-die FPGAs (<b>RapidGranu</b>). More recently, I have been extending LLMs to formal verification.</p>
+    <p class="zh">我的研究围绕一个问题：如何让芯片设计自动化做得更好。以高层次综合（HLS）为切入点，我构建可学习的性能模型与搜索策略：用 LLM 增强的多模型代理与贝叶斯在线优化应对硬件性能的高度非线性（<b>HOLMES</b>），用 LLM–BO 混合搜索与可信度感知过滤应对数据稀缺下的探索（<b>LENS</b>），并用 LLM 驱动的源码变换自动完成多 Die FPGA 的数据流布局规划（<b>RapidGranu</b>）。近期我也在把大模型延伸到形式化验证。</p>
+
+    <p class="en">Alongside research, I have spent about two and a half years in industry: at Shanghai Fudan Microelectronics,
+      working on an HLS tool and its core scheduling algorithm, and in the Advanced Technology Group of UniVista Industrial Software,
+      on LLM-assisted RTL generation and repair that is now part of the <b>UniVista Design Assistant (UDA)</b>.
+      I expect to receive my PhD in June 2027.</p>
+    <p class="zh">在科研之外，我有约两年半的工业界实习经历：在上海复旦微电子参与 HLS 工具软件开发及其核心调度算法研发；在上海合见工业软件先进技术组参与 LLM 辅助 RTL 生成与纠错算法研发，成果应用于合见 <b>UniVista Design Assistant（UDA）</b>。我预计于 2027 年 6 月博士毕业。</p>
   </section>
 
-  <!-- ============ RESEARCH ============ -->
+  <!-- ================= 动态 ================= -->
+  <section id="news">
+    <h2><span class="en">News</span><span class="zh">近期动态</span></h2>
+    <ul class="news">
+      <li><span class="date">2026.09</span>
+        <span><span class="en">Our journal paper <i>Beyond Surrogate Accuracy: Credibility-Aware LLM-Guided Design Space Exploration for HLS</i>
+          is accepted to <b>ACM TRETS</b> (FPT 2026 Journal Track).</span>
+          <span class="zh">期刊论文 <i>Beyond Surrogate Accuracy</i>（LENS-HLS 期刊版）被 <b>ACM TRETS</b> 接收（FPT 2026 Journal Track）。</span></span></li>
+      <li><span class="date">2026.09</span>
+        <span><span class="en"><b>HOLMES 2.0</b> received a minor revision from <b>IEEE TCAD</b>; the revised manuscript has been submitted.</span>
+          <span class="zh"><b>HOLMES 2.0</b> 在 <b>IEEE TCAD</b> 获小修意见，修改稿已提交。</span></span></li>
+      <li><span class="date">2026.05</span>
+        <span><span class="en">Presented <b>LENS-HLS</b> at FCCM 2026 (Atlanta, USA); <b>HOLMES</b> (AMS placement) appeared at ISCAS 2026 (Shanghai).</span>
+          <span class="zh"><b>LENS-HLS</b> 在 FCCM 2026（美国亚特兰大）展示；<b>HOLMES</b>（AMS 布局）发表于 ISCAS 2026（上海）。</span></span></li>
+      <li><span class="date">2026.04</span>
+        <span><span class="en">Started my visiting PhD at the University of Edinburgh, hosted by Dr. Jianyi Cheng.</span>
+          <span class="zh">赴英国爱丁堡大学开始联合培养，合作导师为 Jianyi Cheng 博士。</span></span></li>
+      <li><span class="date">2025.12</span>
+        <span><span class="en">Presented <b>HOLMES-HLS</b> at ICFPT 2025 (Shanghai).</span>
+          <span class="zh"><b>HOLMES-HLS</b> 在 ICFPT 2025（上海）发表。</span></span></li>
+      <li><span class="date">2025.02</span>
+        <span><span class="en">UniVista released the <b>UniVista Design Assistant (UDA)</b>, which includes the LLM-assisted RTL generation work I contributed to as an algorithm intern.</span>
+          <span class="zh">合见工软正式发布 <b>UniVista Design Assistant（UDA）</b>，其中包含我作为算法实习生参与研发的 LLM 辅助 RTL 生成成果。</span></span></li>
+      <li><span class="date">2024.12</span>
+        <span><span class="en">Won <b>2nd place</b> (Stage 2) in the Machine Learning Contest for Chip Design with HLS, hosted by UCLA and AMD.</span>
+          <span class="zh">获 UCLA × AMD 主办的 Machine Learning Contest for Chip Design with HLS（Stage 2）<b>全球第二名</b>。</span></span></li>
+    </ul>
+  </section>
+
+  <!-- ================= 研究 ================= -->
   <section id="research">
-    <h2>Research Interests</h2>
-    <div class="cards">
+    <h2><span class="en">Research</span><span class="zh">研究方向</span></h2>
+    <div class="grid">
       <div class="card">
-        <h3>Design Space Exploration for HLS</h3>
-        <p>Learning-based search over pragmas and directives — Bayesian optimization
-           and multi-model cost estimation to find high-quality latency/area trade-offs
-           without exhaustive synthesis.</p>
+        <h4><span class="en">Design Space Exploration for HLS</span><span class="zh">高层次综合的设计空间探索</span></h4>
+        <p class="en">Learning-based search over pragma configurations — multi-model surrogates, Bayesian optimization and
+          LLM-guided exploration that reach high-quality designs under a limited synthesis budget.</p>
+        <p class="zh">以学习驱动的方式搜索 pragma 配置：结合多模型代理、贝叶斯优化与 LLM 引导探索，在有限综合预算内找到高质量设计。</p>
       </div>
       <div class="card">
-        <h3>LLMs for Hardware Design</h3>
-        <p>Using large language models to read HLS source code semantically, guide the
-           search, and automatically repair or rewrite designs — bringing code-level
-           understanding into a traditionally numeric optimization loop.</p>
+        <h4><span class="en">LLMs for Hardware Design</span><span class="zh">大模型辅助硬件设计</span></h4>
+        <p class="en">Using LLMs to read and transform hardware code: RTL generation and repair, and correctness-preserving
+          source transformations for HLS programs.</p>
+        <p class="zh">让大模型读懂并改写硬件代码：RTL 生成与纠错，以及保证正确性的 HLS 源码变换。</p>
       </div>
       <div class="card">
-        <h3>Architecture-Aware EDA</h3>
-        <p>Cross-stage co-optimization from HLS through logic synthesis to place-and-route,
-           making early decisions aware of downstream tools and the target architecture
-           (FPGA, and beyond).</p>
+        <h4><span class="en">Formal Verification with LLMs</span><span class="zh">大模型辅助形式化验证</span></h4>
+        <p class="en">LLM-assisted generation of formal specifications and proofs — from SVA properties for IC design code
+          to Lean 4 proofs of GPU-kernel equivalence.</p>
+        <p class="zh">用大模型辅助生成形式化规约与证明：从 IC 设计代码的 SVA 断言，到用 Lean 4 证明 GPU 内核的等价性。</p>
       </div>
+      <div class="card">
+        <h4><span class="en">Architecture-Aware EDA</span><span class="zh">体系结构感知的 EDA 优化</span></h4>
+        <p class="en">Cross-stage co-optimization from HLS to logic synthesis and place-and-route, making early decisions aware
+          of downstream tools and the target architecture, such as multi-die FPGAs.</p>
+        <p class="zh">从高层次综合到逻辑综合、布局布线的跨阶段协同优化，让早期决策感知下游工具链与目标体系结构（如多 Die FPGA）。</p>
+      </div>
+    </div>
+
+    <h3><span class="en">Selected Projects</span><span class="zh">代表性项目</span></h3>
+    <div class="project">
+      <div class="project-head"><h4>HOLMES / HOLMES 2.0</h4>
+        <span class="tag">ICFPT 2025</span><span class="tag">IEEE TCAD · minor revision</span></div>
+      <p class="en">Holistic optimization for HLS: an LLM-enhanced multi-model surrogate that decouples pragma configurations from
+        code semantics and combines predictors via a Nash-equilibrium scheme, driven by online Bayesian optimization with
+        closed-loop out-of-distribution control.</p>
+      <p class="zh">面向 HLS 的整体优化框架：LLM 增强的多模型代理解耦 pragma 配置与代码语义，以纳什均衡融合多个预测器，配合贝叶斯在线优化与闭环的分布外风险控制。</p>
+      <div class="metrics">
+        <span class="metric"><span class="en">up to</span><span class="zh">最高</span> <b>11.6×</b> <span class="en">vs. AutoDSE</span><span class="zh">（对比 AutoDSE）</span></span>
+        <span class="metric"><span class="en">geo-mean</span><span class="zh">几何平均</span> <b>1.41×</b> <span class="en">(TCAD)</span><span class="zh">（TCAD 版）</span></span>
+        <span class="metric"><span class="en">search time</span><span class="zh">优化时间</span> <b>25 h → 5 h</b></span>
+      </div>
+    </div>
+    <div class="project">
+      <div class="project-head"><h4>LENS-HLS</h4>
+        <span class="tag">FCCM 2026</span><span class="tag">ACM TRETS 2026</span></div>
+      <p class="en">A two-stage DSE framework that decouples fast exploration from ground-truth synthesis: an LLM–BO hybrid generator
+        proposes diverse candidates from program semantics and HLS knowledge, a neural surrogate screens them, and credibility-aware
+        filtering rejects high-risk candidates before the synthesis budget is spent.</p>
+      <p class="zh">两阶段设计空间探索框架，把快速探索与真实综合验证解耦：LLM–BO 混合生成器结合程序语义与 HLS 领域知识生成多样候选，神经代理快速筛选，再以可信度感知过滤剔除高风险候选后才投入综合预算。</p>
+      <div class="metrics">
+        <span class="metric"><b>2.20×</b> <span class="en">mean speedup over AutoDSE (37 kernels)</span><span class="zh">平均加速（37 个 kernel，对比 AutoDSE）</span></span>
+        <span class="metric"><span class="en">beats HOLMES-HLS's 5-hour result in</span><span class="zh">超过 HOLMES-HLS 5 小时结果仅需</span> <b>1 h</b></span>
+        <span class="metric"><span class="en">final</span><span class="zh">最终</span> <b>2.83×</b></span>
+      </div>
+    </div>
+    <div class="project">
+      <div class="project-head"><h4>RapidGranu</h4>
+        <span class="tag"><span class="en">under review</span><span class="zh">在审</span></span></div>
+      <p class="en">LLM-assisted source transformation that automatically determines floorplanning islands for dataflow HLS on multi-die
+        FPGAs — partitioning and merging dataflow functions while preserving correctness, and lifting resource and inter-die
+        constraints to the source level.</p>
+      <p class="zh">面向多 Die FPGA 的数据流 HLS，利用 LLM 辅助源码变换自动确定布局规划岛：在保证正确性的前提下拆分与合并数据流函数，把资源与跨 Die 约束提升到源码层。</p>
+      <div class="metrics">
+        <span class="metric"><b>+20.74%</b> F<sub>max</sub> <span class="en">vs. AutoBridge</span><span class="zh">（对比 AutoBridge）</span></span>
+        <span class="metric"><b>−17.38%</b> <span class="en">execution time</span><span class="zh">执行时间</span></span>
+        <span class="metric"><span class="en">close to expert manual designs</span><span class="zh">接近专家手工实现</span></span>
+      </div>
+    </div>
+    <div class="project">
+      <div class="project-head"><h4>LLM4Lean · framaC-SVA</h4>
+        <span class="tag wip"><span class="en">in progress</span><span class="zh">进行中</span></span></div>
+      <p class="en">LLM-assisted formal verification: proving the equivalence between CUDA/PTX kernels and PyTorch operator
+        specifications in Lean 4, and generating Frama-C-based SVA specifications for IC design code.</p>
+      <p class="zh">大模型辅助形式化验证：在 Lean 4 中证明 CUDA/PTX 内核与 PyTorch 算子规约的等价性，以及为 IC 设计代码自动生成基于 Frama-C 的 SVA 形式化规约。</p>
     </div>
   </section>
 
-  <!-- ============ PUBLICATIONS ============ -->
+  <!-- ================= 论文 ================= -->
   <section id="publications">
-    <h2>Publications</h2>
+    <h2><span class="en">Publications</span><span class="zh">论文发表</span></h2>
 
-    <div class="pub">
-      <div class="pub-year">2026</div>
-      <div class="pub-body">
-        <p class="pub-title">LENS-HLS: LLM-Enhanced Learning-based Design Space Exploration for High-Level Synthesis<span class="badge">Poster</span></p>
-        <p class="pub-authors"><span class="me">Yujie Yan</span>, Guanhua Chen, Keren Zhu</p>
-        <p class="pub-venue">IEEE 34th Annual International Symposium on Field-Programmable Custom Computing Machines (FCCM), Atlanta, GA, USA, 2026, pp. 272.</p>
-        <div class="pub-links">
-          <a href="https://doi.org/10.1109/FCCM68464.2026.00060">DOI</a>
+    <h3><span class="en">Journal Articles</span><span class="zh">期刊论文</span></h3>
+    <ul class="pubs">
+      <li class="pub">
+        <div><span class="tag venue">TRETS 2026</span></div>
+        <div>
+          <div class="title">Beyond Surrogate Accuracy: Credibility-Aware LLM-Guided Design Space Exploration for High-Level Synthesis</div>
+          <div class="authors"><b>Yujie Yan</b>, Guanhua Chen, Yukang Chen, Jiaxin Huang, Jianyi Cheng, Keren Zhu</div>
+          <div class="where"><i>ACM Transactions on Reconfigurable Technology and Systems (TRETS)</i>, 2026 · FPT 2026 Journal Track</div>
+          <div class="acts"><span class="tag ok"><span class="en">Accepted</span><span class="zh">已接收</span></span></div>
         </div>
-      </div>
-    </div>
+      </li>
+    </ul>
 
-    <div class="pub">
-      <div class="pub-year">2026</div>
-      <div class="pub-body">
-        <p class="pub-title">HOLMES: Hierarchical Optimization with poLygonal ModEling for Large-Scale AMS Placement</p>
-        <p class="pub-authors">Guanhua Chen, <span class="me">Yujie Yan</span>, Jiahua Liu, Zecheng Xu, Linxi Qiu, Yumao Wu, Zhiang Wang, Changhao Yan, Zhaori Bi, Keren Zhu</p>
-        <p class="pub-venue">IEEE International Symposium on Circuits and Systems (ISCAS), Shanghai, China, 2026, pp. 75–79.</p>
-        <div class="pub-links">
-          <a href="https://doi.org/10.1109/ISCAS66217.2026.11563028">DOI</a>
+    <h3><span class="en">Conference Papers</span><span class="zh">会议论文</span></h3>
+    <ul class="pubs">
+      <li class="pub">
+        <div><span class="tag venue">FCCM 2026</span></div>
+        <div>
+          <div class="title">LENS-HLS: LLM-Enhanced Learning-based Design Space Exploration for High-Level Synthesis</div>
+          <div class="authors"><b>Yujie Yan</b>, Guanhua Chen, Keren Zhu</div>
+          <div class="where"><i>IEEE 34th International Symposium on Field-Programmable Custom Computing Machines (FCCM)</i>, Atlanta, GA, USA, 2026, p. 272</div>
+          <div class="acts"><span class="tag">Poster</span><a href="https://doi.org/10.1109/FCCM68464.2026.00060" target="_blank" rel="noopener">DOI</a></div>
         </div>
-      </div>
-    </div>
+      </li>
+      <li class="pub">
+        <div><span class="tag venue">ISCAS 2026</span></div>
+        <div>
+          <div class="title">HOLMES: Hierarchical Optimization with poLygonal ModEling for Large-Scale AMS Placement</div>
+          <div class="authors">Guanhua Chen, <b>Yujie Yan</b>, Jiahua Liu, Zecheng Xu, Linxi Qiu, Yumao Wu, Zhiang Wang, Changhao Yan, Zhaori Bi, Keren Zhu</div>
+          <div class="where"><i>IEEE International Symposium on Circuits and Systems (ISCAS)</i>, Shanghai, China, 2026, pp. 75–79</div>
+          <div class="acts"><a href="https://doi.org/10.1109/ISCAS66217.2026.11563028" target="_blank" rel="noopener">DOI</a></div>
+        </div>
+      </li>
+      <li class="pub">
+        <div><span class="tag venue">ICFPT 2025</span></div>
+        <div>
+          <div class="title">HOLMES-HLS: Holistic Optimization and Learning-based Multi-model Exploration System for High-level Synthesis</div>
+          <div class="authors"><b>Yujie Yan</b>, Guanhua Chen, Ruiyu Lyu, Huizhen Kuang, Kaiwen Zhou, Hao Chen, Lingli Wang, Keren Zhu</div>
+          <div class="where"><i>International Conference on Field Programmable Technology (ICFPT)</i>, Shanghai, China, 2025, pp. 217–218</div>
+          <div class="acts"><span class="tag">Poster</span><a href="https://doi.org/10.1109/ICFPT67023.2025.00037" target="_blank" rel="noopener">DOI</a></div>
+        </div>
+      </li>
+    </ul>
 
-    <div class="pub">
-      <div class="pub-year">2025</div>
-      <div class="pub-body">
-        <p class="pub-title">HOLMES-HLS: Holistic Optimization and Learning-based Multi-model Exploration System for High-Level Synthesis<span class="badge">Poster</span></p>
-        <p class="pub-authors"><span class="me">Yujie Yan</span>, Guanhua Chen, Ruiyu Lyu, Huizhen Kuang, Kaiwen Zhou, Hao Chen, Lingli Wang, Keren Zhu</p>
-        <p class="pub-venue">International Conference on Field Programmable Technology (ICFPT), Shanghai, China, 2025, pp. 217–218.</p>
-        <div class="pub-links">
-          <a href="https://doi.org/10.1109/ICFPT67023.2025.00037">DOI</a>
+    <h3><span class="en">Under Review</span><span class="zh">在审</span></h3>
+    <ul class="pubs">
+      <li class="pub">
+        <div><span class="tag venue">IEEE TCAD</span></div>
+        <div>
+          <div class="title">HOLMES 2.0: Holistic Optimization and Learning-based Multi-model Exploration System for High-Level Synthesis</div>
+          <div class="authors"><b>Yujie Yan</b>, Guanhua Chen, Ruiyu Lyu, Huizhen Kuang, Lingli Wang, Keren Zhu</div>
+          <div class="where"><i>IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD)</i></div>
+          <div class="acts"><span class="tag wip"><span class="en">Minor revision submitted</span><span class="zh">小修已提交</span></span></div>
         </div>
-      </div>
-    </div>
+      </li>
+    </ul>
   </section>
 
-  <!-- ============ EXPERIENCE ============ -->
+  <!-- ================= 经历 ================= -->
   <section id="experience">
-    <h2>Education &amp; Experience</h2>
-
-    <div class="item">
-      <div class="item-date">2026.03 – 2027.02</div>
-      <div class="item-body">
-        <h3>Visiting PhD Student</h3>
-        <p class="where">School of Informatics, University of Edinburgh · Host: Dr. Jianyi Cheng</p>
-        <ul><li>Architecture-aware automated optimization for EDA tools, funded by the China Scholarship Council.</li></ul>
+    <h2><span class="en">Experience</span><span class="zh">教育与工作经历</span></h2>
+    <div class="two-col">
+      <div>
+        <h3 style="margin-top:0"><span class="en">Education</span><span class="zh">教育背景</span></h3>
+        <ul class="tl">
+          <li><div class="when">2026.04 – <span class="en">present</span><span class="zh">至今</span></div>
+            <div class="what"><span class="en">Visiting PhD Student</span><span class="zh">联合培养博士生</span></div>
+            <div class="where"><span class="en">School of Informatics, University of Edinburgh · Host: Dr. Jianyi Cheng</span>
+              <span class="zh">英国爱丁堡大学 信息学院 · 合作导师：Jianyi Cheng 博士</span></div>
+            <div class="detail"><span class="en">China Scholarship Council (CSC) joint-PhD program</span>
+              <span class="zh">国家公派联合培养博士研究生（教育部卓越人才国际化培养项目）</span></div></li>
+          <li><div class="when">2021.09 – 2027.06 <span class="en">(expected)</span><span class="zh">（预计）</span></div>
+            <div class="what"><span class="en">PhD in Integrated Circuits and Systems Design</span><span class="zh">集成电路与系统设计 博士（推免直博）</span></div>
+            <div class="where"><span class="en">Fudan University · Advisor: Prof. Keren Zhu</span><span class="zh">复旦大学 · 导师：Keren Zhu 教授</span></div>
+            <div class="detail"><span class="en">State Key Laboratory of Integrated Chips and Systems · direct-entry PhD</span>
+              <span class="zh">集成芯片与系统全国重点实验室</span></div></li>
+          <li><div class="when">2019.07 – 2019.09</div>
+            <div class="what"><span class="en">Summer Programme in AI &amp; Machine Learning</span><span class="zh">人工智能与机器学习 暑期研修</span></div>
+            <div class="where"><span class="en">University of Manchester, UK</span><span class="zh">英国曼彻斯特大学</span></div></li>
+          <li><div class="when">2017.09 – 2021.06</div>
+            <div class="what"><span class="en">BEng in IC Design and Integrated Systems (Excellent Engineer Program)</span>
+              <span class="zh">集成电路设计与集成系统（卓越计划） 工学学士</span></div>
+            <div class="where"><span class="en">Huazhong University of Science and Technology</span><span class="zh">华中科技大学</span></div>
+            <div class="detail"><span class="en">GPA 3.94/4.0, ranked 5th in the programme · Outstanding Graduate</span>
+              <span class="zh">GPA 3.94/4.0，专业排名第 5 · 校级优秀毕业生</span></div></li>
+        </ul>
       </div>
-    </div>
-
-    <div class="item">
-      <div class="item-date">2021.09 – present</div>
-      <div class="item-body">
-        <h3>PhD in Integrated Circuit and Systems Design</h3>
-        <p class="where">Fudan University · Advisor: Prof. Keren Zhu · Direct-entry PhD (admitted by recommendation)</p>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-date">2021.07 – 2021.09</div>
-      <div class="item-body">
-        <h3>EDA Software Development Intern</h3>
-        <p class="where">Shanghai Fudan Microelectronics Group</p>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-date">2019.07 – 2019.09</div>
-      <div class="item-body">
-        <h3>Summer Research Programme, AI &amp; Machine Learning</h3>
-        <p class="where">University of Manchester, UK</p>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-date">2017.09 – 2021.06</div>
-      <div class="item-body">
-        <h3>BEng in Integrated Circuit Design and Integrated Systems</h3>
-        <p class="where">Huazhong University of Science and Technology · GPA 3.94/4.0, ranked 5th in programme</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ PROJECTS ============ -->
-  <section id="projects">
-    <h2>Selected Projects</h2>
-    <div class="item">
-      <div class="item-body">
-        <h3>LLM-Based Automatic Code Repair for Hardware Design</h3>
-        <p class="where">Industry collaboration with UniVista Industrial Software</p>
-        <ul><li>Large language models applied to automatically detect and repair defects in circuit design code.</li></ul>
-      </div>
-    </div>
-    <div class="item">
-      <div class="item-body">
-        <h3>FPGA Accelerator for LeNet-5</h3>
-        <p class="where">Verilog HDL · AMD Xilinx Vivado</p>
-        <ul><li>End-to-end hardware implementation of a convolutional neural network on FPGA.</li></ul>
-      </div>
-    </div>
-    <div class="item">
-      <div class="item-body">
-        <h3>Hardware Implementation of the VESA DSC 1.2 Video Stream Standard</h3>
-        <p class="where">High-Level Synthesis</p>
-        <ul><li>Full display stream compression pipeline implemented and optimized through HLS.</li></ul>
+      <div>
+        <h3 style="margin-top:0"><span class="en">Industry</span><span class="zh">工业界经历</span></h3>
+        <ul class="tl">
+          <li><div class="when">2024.07 – 2026.01</div>
+            <div class="what"><span class="en">Algorithm Intern, Advanced Technology Group</span><span class="zh">算法实习生 · 先进技术组</span></div>
+            <div class="where"><span class="en">UniVista Industrial Software Group, Shanghai</span><span class="zh">上海合见工业软件集团</span></div>
+            <div class="detail"><span class="en">LLM-assisted RTL generation and repair; results applied in the UniVista Design Assistant (UDA), released in Feb 2025.</span>
+              <span class="zh">参与 LLM 辅助 RTL 生成与纠错算法研发，成果应用于 2025 年 2 月发布的 UniVista Design Assistant（UDA）。</span></div></li>
+          <li><div class="when">2023.06 – 2024.06</div>
+            <div class="what"><span class="en">Software Development Intern, Software Department</span><span class="zh">软件开发实习生 · 软件部</span></div>
+            <div class="where"><span class="en">Shanghai Fudan Microelectronics Group</span><span class="zh">上海复旦微电子集团</span></div>
+            <div class="detail"><span class="en">HLS tool development; contributed to the research and development of its core scheduling algorithm.</span>
+              <span class="zh">参与 HLS 工具软件开发及核心调度算法的研究与开发。</span></div></li>
+          <li><div class="when">2021.07 – 2021.09</div>
+            <div class="what"><span class="en">EDA Software Development Intern</span><span class="zh">EDA 软件开发实习生</span></div>
+            <div class="where"><span class="en">Shanghai Fudan Microelectronics Group</span><span class="zh">上海复旦微电子集团</span></div></li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- ============ AWARDS ============ -->
+  <!-- ================= 荣誉 ================= -->
   <section id="awards">
-    <h2>Awards &amp; Honours</h2>
+    <h2><span class="en">Awards &amp; Honours</span><span class="zh">荣誉与奖项</span></h2>
+    <ul class="awards">
+      <li><span class="year">2025</span>
+        <span><span class="en">China Scholarship Council (CSC) Joint-PhD Scholarship</span>
+          <span class="zh">国家公派联合培养博士研究生（教育部卓越人才国际化培养项目）</span></span></li>
+      <li><span class="year">2024</span>
+        <span><span class="en">2nd Place (Stage 2), Machine Learning Contest for Chip Design with HLS</span>
+          <span class="zh">Machine Learning Contest for Chip Design with HLS（Stage 2）全球第二名</span>
+          <div class="org"><span class="en">Hosted by UCLA and AMD</span><span class="zh">美国加州大学洛杉矶分校（UCLA）与 AMD 主办</span></div></span></li>
+      <li><span class="year">2024</span>
+        <span><span class="en">Outstanding Student, Fudan University (2023–2024)</span>
+          <span class="zh">复旦大学优秀学生（2023–2024 学年）</span></span></li>
+      <li><span class="year">2022–23</span>
+        <span><span class="en">Fudan University Academic Scholarship (First Class ×1, Second Class ×2)</span>
+          <span class="zh">复旦大学学业奖学金（一等 1 次、二等 2 次）</span></span></li>
+      <li><span class="year">2021</span>
+        <span><span class="en">Outstanding Graduate, Huazhong University of Science and Technology</span>
+          <span class="zh">华中科技大学优秀毕业生</span></span></li>
+      <li><span class="year">2020</span>
+        <span><span class="en">National Excellence Award, China Undergraduate IC Innovation and Entrepreneurship Competition</span>
+          <span class="zh">全国大学生集成电路创新创业大赛 全国优秀奖</span></span></li>
+      <li><span class="year">2020</span>
+        <span><span class="en">Honorable Mention, Mathematical Contest in Modeling (MCM/ICM)</span>
+          <span class="zh">美国大学生数学建模竞赛 国际二等奖（Honorable Mention）</span>
+          <div class="org">COMAP</div></span></li>
+    </ul>
 
-    <div class="item">
-      <div class="item-date">2024</div>
-      <div class="item-body">
-        <h3>2nd Place, Machine Learning Contest for Chip Design with HLS</h3>
-        <p class="where">Global competition hosted by UCLA</p>
-      </div>
-    </div>
-    <div class="item">
-      <div class="item-date">2021</div>
-      <div class="item-body">
-        <h3>Outstanding Graduate</h3>
-        <p class="where">Huazhong University of Science and Technology</p>
-      </div>
-    </div>
-    <div class="item">
-      <div class="item-date">2020</div>
-      <div class="item-body">
-        <h3>National Excellence Award, China Undergraduate IC Innovation and Entrepreneurship Competition</h3>
-        <p class="where">National level</p>
-      </div>
-    </div>
-    <div class="item">
-      <div class="item-date">2020</div>
-      <div class="item-body">
-        <h3>Meritorious Winner, Mathematical Contest in Modeling (MCM/ICM)</h3>
-        <p class="where">COMAP, USA</p>
-      </div>
-    </div>
-    <div class="item">
-      <div class="item-date">2019 – 2021</div>
-      <div class="item-body">
-        <h3>Principal Investigator, Provincial Undergraduate Innovation and Entrepreneurship Training Programme</h3>
-        <p class="where">Hubei Province</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ SKILLS ============ -->
-  <section id="skills">
-    <h2>Technical Skills</h2>
+    <h3><span class="en">Technical Skills</span><span class="zh">专业技能</span></h3>
     <dl class="skills">
-      <dt>Languages</dt><dd>C/C++, Python, Verilog HDL</dd>
-      <dt>EDA / HLS</dt><dd>AMD Xilinx Vitis HLS, Vivado</dd>
-      <dt>ML</dt><dd>PyTorch, Bayesian optimization, graph neural networks, LLM fine-tuning &amp; prompting</dd>
+      <dt><span class="en">Programming</span><span class="zh">编程语言</span></dt><dd>C/C++, Python, Verilog HDL</dd>
+      <dt><span class="en">Compilers &amp; HPC</span><span class="zh">编译与并行</span></dt><dd>LLVM, MLIR, CUDA</dd>
+      <dt><span class="en">EDA / HLS</span><span class="zh">EDA 工具</span></dt><dd>AMD Xilinx Vitis HLS, Vivado</dd>
+      <dt><span class="en">Machine Learning</span><span class="zh">机器学习</span></dt>
+      <dd><span class="en">PyTorch, Transformers, Bayesian optimization, GNNs, LLM fine-tuning and data curation</span>
+        <span class="zh">PyTorch、Transformer、贝叶斯优化、图神经网络、大模型微调与语料处理</span></dd>
+      <dt><span class="en">Formal Methods</span><span class="zh">形式化方法</span></dt><dd>Lean 4, Frama-C</dd>
     </dl>
   </section>
-
-  <!-- ============ CONTACT ============ -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>
-      Email · <a href="mailto:yjyan21@m.fudan.edu.cn">yjyan21@m.fudan.edu.cn</a>
-      &nbsp;|&nbsp; <a href="mailto:yjyan6191@gmail.com">yjyan6191@gmail.com</a><br>
-      Currently based in Edinburgh, UK &nbsp;·&nbsp; Home institution: Fudan University, Shanghai, China
-    </p>
-  </section>
-
 </main>
 
 <footer>
-  © <span id="year">2026</span> Yujie Yan · Last updated: August 2026
+  © <span id="year">2026</span> Yujie Yan ·
+  <span class="en">Last updated: October 2026</span><span class="zh">最后更新：2026 年 10 月</span>
 </footer>
 
 <script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-  (function(){
-    var box = document.getElementById('avatar'), img = new Image();
-    img.onload = function(){ box.outerHTML = '<img class="avatar" src="assets/photo.jpg" alt="Yujie Yan">'; };
-    img.src = 'assets/photo.jpg';
+  (function () {
+    var root = document.documentElement;
+    function store(k, v) { try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) { return null; } }
+
+    // ---- language: ?lang= → saved choice → browser language ----
+    var param = (location.search.match(/[?&]lang=(en|zh)/) || [])[1];
+    var lang = param || store('lang') || ((navigator.language || '').toLowerCase().indexOf('zh') === 0 ? 'zh' : 'en');
+    var langBtn = document.getElementById('langBtn');
+    function setLang(l) {
+      root.setAttribute('lang', l);
+      langBtn.textContent = l === 'en' ? '中文' : 'EN';
+      document.title = l === 'en' ? 'Yujie Yan · 严宇杰' : '严宇杰 · Yujie Yan';
+      store('lang', l);
+    }
+    setLang(lang);
+    langBtn.addEventListener('click', function () { setLang(root.getAttribute('lang') === 'en' ? 'zh' : 'en'); });
+
+    // ---- theme: saved choice, otherwise follow the system ----
+    var theme = store('theme');
+    if (theme) root.setAttribute('data-theme', theme);
+    document.getElementById('themeBtn').addEventListener('click', function () {
+      var dark = root.getAttribute('data-theme') ? root.getAttribute('data-theme') === 'dark'
+                 : window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var next = dark ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      store('theme', next);
+    });
+
+    // ---- hide the CV button if assets/CV.pdf has not been uploaded yet ----
+    var cv = document.getElementById('cvLink');
+    if (location.protocol.indexOf('http') === 0 && window.fetch) {
+      fetch(cv.getAttribute('href'), { method: 'HEAD' }).then(function (r) { if (!r.ok) cv.style.display = 'none'; }).catch(function () {});
+    }
+
+    // ---- highlight the current section in the nav ----
+    var links = Array.prototype.slice.call(document.querySelectorAll('.nav-links a'));
+    if ('IntersectionObserver' in window) {
+      var obs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting) {
+            links.forEach(function (a) { a.classList.toggle('active', a.getAttribute('href') === '#' + en.target.id); });
+          }
+        });
+      }, { rootMargin: '-45% 0px -50% 0px' });
+      document.querySelectorAll('main section[id]').forEach(function (s) { obs.observe(s); });
+    }
+
+    document.getElementById('year').textContent = new Date().getFullYear();
   })();
 </script>
-
 </body>
 </html>
