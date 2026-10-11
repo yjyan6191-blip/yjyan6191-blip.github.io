@@ -1,12 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--
-============================================================
- 严宇杰 · 个人主页（GitHub Pages）   更新：2026-10
-============================================================
- 怎么改：1. 文字：每段中英文成对出现class="en" → 英文版显示的内容class="zh" → 中文版显示的内容改完两个都要改，否则切换语言时会缺内容。2. 照片放在 assets/photo.jpg（建议正方形，≥ 400×400）3. 简历放在 assets/CV.pdf（建议放英文版）；文件不存在时“CV”按钮会自动隐藏4. Google Scholar / GitHub / LinkedIn：在下方“联系方式”里把注释去掉、换成自己的链接5. 内容来源：2026秋招简历/00_个人信息数据库.md；新论文接收后，在“论文”和“动态”两处各加一条注意：- 手机号不放在公开网页上；邮箱以爱丁堡邮箱为主- DATE 2027 投稿处于双盲评审期，暂不在公开网页列出题目；接收后再加- 页面不依赖任何外部字体或 CDN，国内访问也能秒开
-============================================================
--->
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -115,17 +108,10 @@
   .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
   .card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px 18px; box-shadow: var(--shadow); }
   .card h4 { margin: 0 0 6px; font-size: 16px; }
+  .card h4 .tag { margin-left: 8px; vertical-align: 2px; }
   .card p { margin: 0; color: var(--muted); font-size: 15px; }
 
   /* ---------- projects ---------- */
-  .project { padding: 14px 0; border-bottom: 1px solid var(--line); }
-  .project:last-child { border-bottom: 0; }
-  .project-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 10px; margin-bottom: 4px; }
-  .project-head h4 { margin: 0; font-size: 16.5px; }
-  .project p { margin: 4px 0 0; font-size: 15.5px; }
-  .metrics { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
-  .metric { background: var(--bg-soft); border: 1px solid var(--line); border-radius: 8px; padding: 4px 10px; font-size: 13.5px; }
-  .metric b { color: var(--accent); }
 
   /* ---------- tags ---------- */
   .tag { display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: .02em; padding: 2px 8px;
@@ -208,9 +194,9 @@
     <nav class="nav-links" aria-label="Sections">
       <a href="#about"><span class="en">About</span><span class="zh">简介</span></a>
       <a href="#news"><span class="en">News</span><span class="zh">动态</span></a>
+      <a href="#experience"><span class="en">Experience</span><span class="zh">经历</span></a>
       <a href="#research"><span class="en">Research</span><span class="zh">研究</span></a>
       <a href="#publications"><span class="en">Publications</span><span class="zh">论文</span></a>
-      <a href="#experience"><span class="en">Experience</span><span class="zh">经历</span></a>
       <a href="#awards"><span class="en">Awards</span><span class="zh">荣誉</span></a>
     </nav>
     <div class="nav-tools">
@@ -233,9 +219,9 @@
           联合培养博士生，英国爱丁堡大学信息学院</span>
       </p>
       <p class="tagline">
-        <span class="en">I build learning-based optimization for EDA tools — teaching high-level synthesis to explore its own
-          design space, and bringing large language models into hardware design and verification.</span>
-        <span class="zh">我研究面向 EDA 工具的学习式自动优化：让高层次综合学会自主探索设计空间，并把大语言模型引入硬件设计与验证。</span>
+        <span class="en">I work on compilers and learning-based optimization for chip design — from high-level synthesis to
+          LLM-assisted hardware code generation and verification.</span>
+        <span class="zh">我研究面向芯片设计的编译与学习式优化：从高层次综合，到大模型辅助的硬件代码生成与验证。</span>
       </p>
       <!-- 求职提示：入职后删掉这一段即可 -->
       <p class="callout">
@@ -275,14 +261,12 @@
       Since April 2026 I have been a visiting PhD student at the
       <a href="https://informatics.ed.ac.uk/" target="_blank" rel="noopener">School of Informatics, University of Edinburgh</a>,
       hosted by Dr. <a href="https://jianyicheng.github.io/" target="_blank" rel="noopener">Jianyi Cheng</a> and funded by the China Scholarship Council.</p>
-    <p class="zh">我是<a href="https://www.fudan.edu.cn/" target="_blank" rel="noopener">复旦大学</a>集成电路与微纳电子创新学院的博士研究生，依托集成芯片与系统全国重点实验室，师从 <a href="https://krz.engineer/" target="_blank" rel="noopener">Keren Zhu</a> 教授。2026 年 4 月起，我作为国家公派联合培养博士生在<a href="https://informatics.ed.ac.uk/" target="_blank" rel="noopener">英国爱丁堡大学信息学院</a>访问，合作导师为 <a href="https://jianyicheng.github.io/" target="_blank" rel="noopener">Jianyi Cheng</a> 博士。</p>
+    <p class="zh">我是<a href="https://www.fudan.edu.cn/" target="_blank" rel="noopener">复旦大学</a>集成电路与微纳电子创新学院的博士研究生，依托集成芯片与系统全国重点实验室，师从 <a href="https://krz.engineer/" target="_blank" rel="noopener">Keren Zhu</a> 教授。2026 年 4 月起，我作为国家公派联合培养博士生在<a href="https://informatics.ed.ac.uk/" target="_blank" rel="noopener">英国爱丁堡大学信息学院</a>访问，导师为 <a href="https://jianyicheng.github.io/" target="_blank" rel="noopener">Jianyi Cheng</a>。</p>
 
-    <p class="en">My research asks how chip design automation can be done better. Starting from high-level synthesis (HLS),
-      I build learnable performance models and search strategies: LLM-enhanced multi-model surrogates with online Bayesian optimization
-      for highly nonlinear hardware performance (<b>HOLMES</b>), an LLM–BO hybrid search with credibility-aware filtering for
-      data-scarce exploration (<b>LENS</b>), and LLM-driven source transformation that automates dataflow floorplanning on
-      multi-die FPGAs (<b>RapidGranu</b>). More recently, I have been extending LLMs to formal verification.</p>
-    <p class="zh">我的研究围绕一个问题：如何让芯片设计自动化做得更好。以高层次综合（HLS）为切入点，我构建可学习的性能模型与搜索策略：用 LLM 增强的多模型代理与贝叶斯在线优化应对硬件性能的高度非线性（<b>HOLMES</b>），用 LLM–BO 混合搜索与可信度感知过滤应对数据稀缺下的探索（<b>LENS</b>），并用 LLM 驱动的源码变换自动完成多 Die FPGA 的数据流布局规划（<b>RapidGranu</b>）。近期我也在把大模型延伸到形式化验证。</p>
+    <p class="en">My research aims to automate chip design, using neural networks and large language models to assist in
+      designing chips and formally verifying them, so that hardware can be both efficient and correct. My research interests
+      include high-level synthesis, compilers, electronic design automation, machine learning for systems, and formal methods.</p>
+    <p class="zh">我的研究聚焦芯片设计自动化：借助神经网络、大语言模型等技术，辅助完成芯片的设计与形式化验证，让硬件既高效又正确。我的研究兴趣包括高层次综合、编译器、电子设计自动化（EDA）、面向系统的机器学习以及形式化方法。</p>
 
     <p class="en">Alongside research, I have spent about two and a half years in industry: at Shanghai Fudan Microelectronics,
       working on an HLS tool and its core scheduling algorithm, and in the Advanced Technology Group of UniVista Industrial Software,
@@ -295,19 +279,12 @@
   <section id="news">
     <h2><span class="en">News</span><span class="zh">近期动态</span></h2>
     <ul class="news">
-      <li><span class="date">2026.09</span>
-        <span><span class="en">Our journal paper <i>Beyond Surrogate Accuracy: Credibility-Aware LLM-Guided Design Space Exploration for HLS</i>
-          is accepted to <b>ACM TRETS</b> (FPT 2026 Journal Track).</span>
-          <span class="zh">期刊论文 <i>Beyond Surrogate Accuracy</i>（LENS-HLS 期刊版）被 <b>ACM TRETS</b> 接收（FPT 2026 Journal Track）。</span></span></li>
-      <li><span class="date">2026.09</span>
-        <span><span class="en"><b>HOLMES 2.0</b> received a minor revision from <b>IEEE TCAD</b>; the revised manuscript has been submitted.</span>
-          <span class="zh"><b>HOLMES 2.0</b> 在 <b>IEEE TCAD</b> 获小修意见，修改稿已提交。</span></span></li>
       <li><span class="date">2026.05</span>
         <span><span class="en">Presented <b>LENS-HLS</b> at FCCM 2026 (Atlanta, USA); <b>HOLMES</b> (AMS placement) appeared at ISCAS 2026 (Shanghai).</span>
           <span class="zh"><b>LENS-HLS</b> 在 FCCM 2026（美国亚特兰大）展示；<b>HOLMES</b>（AMS 布局）发表于 ISCAS 2026（上海）。</span></span></li>
       <li><span class="date">2026.04</span>
         <span><span class="en">Started my visiting PhD at the University of Edinburgh, hosted by Dr. Jianyi Cheng.</span>
-          <span class="zh">赴英国爱丁堡大学开始联合培养，合作导师为 Jianyi Cheng 博士。</span></span></li>
+          <span class="zh">赴英国爱丁堡大学开始联合培养，导师为 Jianyi Cheng。</span></span></li>
       <li><span class="date">2025.12</span>
         <span><span class="en">Presented <b>HOLMES-HLS</b> at ICFPT 2025 (Shanghai).</span>
           <span class="zh"><b>HOLMES-HLS</b> 在 ICFPT 2025（上海）发表。</span></span></li>
@@ -315,155 +292,14 @@
         <span><span class="en">UniVista released the <b>UniVista Design Assistant (UDA)</b>, which includes the LLM-assisted RTL generation work I contributed to as an algorithm intern.</span>
           <span class="zh">合见工软正式发布 <b>UniVista Design Assistant（UDA）</b>，其中包含我作为算法实习生参与研发的 LLM 辅助 RTL 生成成果。</span></span></li>
       <li><span class="date">2024.12</span>
-        <span><span class="en">Won <b>2nd place</b> (Stage 2) in the Machine Learning Contest for Chip Design with HLS, hosted by UCLA and AMD.</span>
-          <span class="zh">获 UCLA × AMD 主办的 Machine Learning Contest for Chip Design with HLS（Stage 2）<b>全球第二名</b>。</span></span></li>
-    </ul>
-  </section>
-
-  <!-- ================= 研究 ================= -->
-  <section id="research">
-    <h2><span class="en">Research</span><span class="zh">研究方向</span></h2>
-    <div class="grid">
-      <div class="card">
-        <h4><span class="en">Design Space Exploration for HLS</span><span class="zh">高层次综合的设计空间探索</span></h4>
-        <p class="en">Learning-based search over pragma configurations — multi-model surrogates, Bayesian optimization and
-          LLM-guided exploration that reach high-quality designs under a limited synthesis budget.</p>
-        <p class="zh">以学习驱动的方式搜索 pragma 配置：结合多模型代理、贝叶斯优化与 LLM 引导探索，在有限综合预算内找到高质量设计。</p>
-      </div>
-      <div class="card">
-        <h4><span class="en">LLMs for Hardware Design</span><span class="zh">大模型辅助硬件设计</span></h4>
-        <p class="en">Using LLMs to read and transform hardware code: RTL generation and repair, and correctness-preserving
-          source transformations for HLS programs.</p>
-        <p class="zh">让大模型读懂并改写硬件代码：RTL 生成与纠错，以及保证正确性的 HLS 源码变换。</p>
-      </div>
-      <div class="card">
-        <h4><span class="en">Formal Verification with LLMs</span><span class="zh">大模型辅助形式化验证</span></h4>
-        <p class="en">LLM-assisted generation of formal specifications and proofs — from SVA properties for IC design code
-          to Lean 4 proofs of GPU-kernel equivalence.</p>
-        <p class="zh">用大模型辅助生成形式化规约与证明：从 IC 设计代码的 SVA 断言，到用 Lean 4 证明 GPU 内核的等价性。</p>
-      </div>
-      <div class="card">
-        <h4><span class="en">Architecture-Aware EDA</span><span class="zh">体系结构感知的 EDA 优化</span></h4>
-        <p class="en">Cross-stage co-optimization from HLS to logic synthesis and place-and-route, making early decisions aware
-          of downstream tools and the target architecture, such as multi-die FPGAs.</p>
-        <p class="zh">从高层次综合到逻辑综合、布局布线的跨阶段协同优化，让早期决策感知下游工具链与目标体系结构（如多 Die FPGA）。</p>
-      </div>
-    </div>
-
-    <h3><span class="en">Selected Projects</span><span class="zh">代表性项目</span></h3>
-    <div class="project">
-      <div class="project-head"><h4>HOLMES / HOLMES 2.0</h4>
-        <span class="tag">ICFPT 2025</span><span class="tag">IEEE TCAD · minor revision</span></div>
-      <p class="en">Holistic optimization for HLS: an LLM-enhanced multi-model surrogate that decouples pragma configurations from
-        code semantics and combines predictors via a Nash-equilibrium scheme, driven by online Bayesian optimization with
-        closed-loop out-of-distribution control.</p>
-      <p class="zh">面向 HLS 的整体优化框架：LLM 增强的多模型代理解耦 pragma 配置与代码语义，以纳什均衡融合多个预测器，配合贝叶斯在线优化与闭环的分布外风险控制。</p>
-      <div class="metrics">
-        <span class="metric"><span class="en">up to</span><span class="zh">最高</span> <b>11.6×</b> <span class="en">vs. AutoDSE</span><span class="zh">（对比 AutoDSE）</span></span>
-        <span class="metric"><span class="en">geo-mean</span><span class="zh">几何平均</span> <b>1.41×</b> <span class="en">(TCAD)</span><span class="zh">（TCAD 版）</span></span>
-        <span class="metric"><span class="en">search time</span><span class="zh">优化时间</span> <b>25 h → 5 h</b></span>
-      </div>
-    </div>
-    <div class="project">
-      <div class="project-head"><h4>LENS-HLS</h4>
-        <span class="tag">FCCM 2026</span><span class="tag">ACM TRETS 2026</span></div>
-      <p class="en">A two-stage DSE framework that decouples fast exploration from ground-truth synthesis: an LLM–BO hybrid generator
-        proposes diverse candidates from program semantics and HLS knowledge, a neural surrogate screens them, and credibility-aware
-        filtering rejects high-risk candidates before the synthesis budget is spent.</p>
-      <p class="zh">两阶段设计空间探索框架，把快速探索与真实综合验证解耦：LLM–BO 混合生成器结合程序语义与 HLS 领域知识生成多样候选，神经代理快速筛选，再以可信度感知过滤剔除高风险候选后才投入综合预算。</p>
-      <div class="metrics">
-        <span class="metric"><b>2.20×</b> <span class="en">mean speedup over AutoDSE (37 kernels)</span><span class="zh">平均加速（37 个 kernel，对比 AutoDSE）</span></span>
-        <span class="metric"><span class="en">beats HOLMES-HLS's 5-hour result in</span><span class="zh">超过 HOLMES-HLS 5 小时结果仅需</span> <b>1 h</b></span>
-        <span class="metric"><span class="en">final</span><span class="zh">最终</span> <b>2.83×</b></span>
-      </div>
-    </div>
-    <div class="project">
-      <div class="project-head"><h4>RapidGranu</h4>
-        <span class="tag"><span class="en">under review</span><span class="zh">在审</span></span></div>
-      <p class="en">LLM-assisted source transformation that automatically determines floorplanning islands for dataflow HLS on multi-die
-        FPGAs — partitioning and merging dataflow functions while preserving correctness, and lifting resource and inter-die
-        constraints to the source level.</p>
-      <p class="zh">面向多 Die FPGA 的数据流 HLS，利用 LLM 辅助源码变换自动确定布局规划岛：在保证正确性的前提下拆分与合并数据流函数，把资源与跨 Die 约束提升到源码层。</p>
-      <div class="metrics">
-        <span class="metric"><b>+20.74%</b> F<sub>max</sub> <span class="en">vs. AutoBridge</span><span class="zh">（对比 AutoBridge）</span></span>
-        <span class="metric"><b>−17.38%</b> <span class="en">execution time</span><span class="zh">执行时间</span></span>
-        <span class="metric"><span class="en">close to expert manual designs</span><span class="zh">接近专家手工实现</span></span>
-      </div>
-    </div>
-    <div class="project">
-      <div class="project-head"><h4>LLM4Lean · framaC-SVA</h4>
-        <span class="tag wip"><span class="en">in progress</span><span class="zh">进行中</span></span></div>
-      <p class="en">LLM-assisted formal verification: proving the equivalence between CUDA/PTX kernels and PyTorch operator
-        specifications in Lean 4, and generating Frama-C-based SVA specifications for IC design code.</p>
-      <p class="zh">大模型辅助形式化验证：在 Lean 4 中证明 CUDA/PTX 内核与 PyTorch 算子规约的等价性，以及为 IC 设计代码自动生成基于 Frama-C 的 SVA 形式化规约。</p>
-    </div>
-  </section>
-
-  <!-- ================= 论文 ================= -->
-  <section id="publications">
-    <h2><span class="en">Publications</span><span class="zh">论文发表</span></h2>
-
-    <h3><span class="en">Journal Articles</span><span class="zh">期刊论文</span></h3>
-    <ul class="pubs">
-      <li class="pub">
-        <div><span class="tag venue">TRETS 2026</span></div>
-        <div>
-          <div class="title">Beyond Surrogate Accuracy: Credibility-Aware LLM-Guided Design Space Exploration for High-Level Synthesis</div>
-          <div class="authors"><b>Yujie Yan</b>, Guanhua Chen, Yukang Chen, Jiaxin Huang, Jianyi Cheng, Keren Zhu</div>
-          <div class="where"><i>ACM Transactions on Reconfigurable Technology and Systems (TRETS)</i>, 2026 · FPT 2026 Journal Track</div>
-          <div class="acts"><span class="tag ok"><span class="en">Accepted</span><span class="zh">已接收</span></span></div>
-        </div>
-      </li>
-    </ul>
-
-    <h3><span class="en">Conference Papers</span><span class="zh">会议论文</span></h3>
-    <ul class="pubs">
-      <li class="pub">
-        <div><span class="tag venue">FCCM 2026</span></div>
-        <div>
-          <div class="title">LENS-HLS: LLM-Enhanced Learning-based Design Space Exploration for High-Level Synthesis</div>
-          <div class="authors"><b>Yujie Yan</b>, Guanhua Chen, Keren Zhu</div>
-          <div class="where"><i>IEEE 34th International Symposium on Field-Programmable Custom Computing Machines (FCCM)</i>, Atlanta, GA, USA, 2026, p. 272</div>
-          <div class="acts"><span class="tag">Poster</span><a href="https://doi.org/10.1109/FCCM68464.2026.00060" target="_blank" rel="noopener">DOI</a></div>
-        </div>
-      </li>
-      <li class="pub">
-        <div><span class="tag venue">ISCAS 2026</span></div>
-        <div>
-          <div class="title">HOLMES: Hierarchical Optimization with poLygonal ModEling for Large-Scale AMS Placement</div>
-          <div class="authors">Guanhua Chen, <b>Yujie Yan</b>, Jiahua Liu, Zecheng Xu, Linxi Qiu, Yumao Wu, Zhiang Wang, Changhao Yan, Zhaori Bi, Keren Zhu</div>
-          <div class="where"><i>IEEE International Symposium on Circuits and Systems (ISCAS)</i>, Shanghai, China, 2026, pp. 75–79</div>
-          <div class="acts"><a href="https://doi.org/10.1109/ISCAS66217.2026.11563028" target="_blank" rel="noopener">DOI</a></div>
-        </div>
-      </li>
-      <li class="pub">
-        <div><span class="tag venue">ICFPT 2025</span></div>
-        <div>
-          <div class="title">HOLMES-HLS: Holistic Optimization and Learning-based Multi-model Exploration System for High-level Synthesis</div>
-          <div class="authors"><b>Yujie Yan</b>, Guanhua Chen, Ruiyu Lyu, Huizhen Kuang, Kaiwen Zhou, Hao Chen, Lingli Wang, Keren Zhu</div>
-          <div class="where"><i>International Conference on Field Programmable Technology (ICFPT)</i>, Shanghai, China, 2025, pp. 217–218</div>
-          <div class="acts"><span class="tag">Poster</span><a href="https://doi.org/10.1109/ICFPT67023.2025.00037" target="_blank" rel="noopener">DOI</a></div>
-        </div>
-      </li>
-    </ul>
-
-    <h3><span class="en">Under Review</span><span class="zh">在审</span></h3>
-    <ul class="pubs">
-      <li class="pub">
-        <div><span class="tag venue">IEEE TCAD</span></div>
-        <div>
-          <div class="title">HOLMES 2.0: Holistic Optimization and Learning-based Multi-model Exploration System for High-Level Synthesis</div>
-          <div class="authors"><b>Yujie Yan</b>, Guanhua Chen, Ruiyu Lyu, Huizhen Kuang, Lingli Wang, Keren Zhu</div>
-          <div class="where"><i>IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD)</i></div>
-          <div class="acts"><span class="tag wip"><span class="en">Minor revision submitted</span><span class="zh">小修已提交</span></span></div>
-        </div>
-      </li>
+        <span><span class="en">Won <b>2nd place</b> (Stage 2) in the Machine Learning Contest for Chip Design with HLS, hosted by UCLA and AMD; the results were showcased during <b>NeurIPS 2024</b>.</span>
+          <span class="zh">获 UCLA × AMD 主办的 Machine Learning Contest for Chip Design with HLS（Stage 2）<b>全球第二名</b>，成果在 <b>NeurIPS 2024</b> 会议期间展出。</span></span></li>
     </ul>
   </section>
 
   <!-- ================= 经历 ================= -->
   <section id="experience">
-    <h2><span class="en">Experience</span><span class="zh">教育与工作经历</span></h2>
+    <h2><span class="en">Education &amp; Experience</span><span class="zh">教育与工作经历</span></h2>
     <div class="two-col">
       <div>
         <h3 style="margin-top:0"><span class="en">Education</span><span class="zh">教育背景</span></h3>
@@ -471,7 +307,7 @@
           <li><div class="when">2026.04 – <span class="en">present</span><span class="zh">至今</span></div>
             <div class="what"><span class="en">Visiting PhD Student</span><span class="zh">联合培养博士生</span></div>
             <div class="where"><span class="en">School of Informatics, University of Edinburgh · Host: Dr. Jianyi Cheng</span>
-              <span class="zh">英国爱丁堡大学 信息学院 · 合作导师：Jianyi Cheng 博士</span></div>
+              <span class="zh">英国爱丁堡大学 信息学院 · 导师：Jianyi Cheng</span></div>
             <div class="detail"><span class="en">China Scholarship Council (CSC) joint-PhD program</span>
               <span class="zh">国家公派联合培养博士研究生（教育部卓越人才国际化培养项目）</span></div></li>
           <li><div class="when">2021.09 – 2027.06 <span class="en">(expected)</span><span class="zh">（预计）</span></div>
@@ -511,6 +347,80 @@
     </div>
   </section>
 
+  <!-- ================= 研究 ================= -->
+  <section id="research">
+    <h2><span class="en">Research</span><span class="zh">研究方向</span></h2>
+    <div class="grid">
+      <div class="card">
+        <h4><span class="en">Hardware Compilation &amp; HW/SW Co-design</span><span class="zh">硬件编译与软硬件协同</span></h4>
+        <p class="en">High-level synthesis as a hardware compiler: scheduling, optimization directives and source-level
+          transformations that map software programs efficiently onto hardware.</p>
+        <p class="zh">把高层次综合视作硬件编译器：研究调度、优化指令与源码级变换，让软件程序高效地映射到硬件上。</p>
+      </div>
+      <div class="card">
+        <h4><span class="en">Learning-based Auto-tuning</span><span class="zh">学习式自动调优</span></h4>
+        <p class="en">Neural-network cost models, Bayesian optimization and LLM-guided search that find high-quality
+          configurations in huge, expensive-to-evaluate optimization spaces.</p>
+        <p class="zh">结合神经网络代价模型、贝叶斯优化与大模型引导搜索，在规模巨大、评估昂贵的优化空间中自动找到高质量配置。</p>
+      </div>
+      <div class="card">
+        <h4><span class="en">LLMs for Hardware Code</span><span class="zh">大模型辅助硬件代码</span></h4>
+        <p class="en">Using large language models to understand, generate and repair hardware code — from RTL generation to
+          correctness-preserving program transformation.</p>
+        <p class="zh">用大语言模型理解、生成和修复硬件代码：从 RTL 生成到保证正确性的程序变换。</p>
+      </div>
+      <div class="card">
+        <h4><span class="en">Formal Verification &amp; Operator Correctness</span><span class="zh">形式化验证与算子正确性</span><span class="tag wip"><span class="en">In progress</span><span class="zh">进行中</span></span></h4>
+        <p class="en">Using LLMs to help write formal specifications and proofs, so that operators, compiler transformations
+          and generated hardware code can be rigorously checked for correctness.</p>
+        <p class="zh">用大模型辅助编写形式化规约与证明，让算子、编译变换以及生成的硬件代码都能被严格验证其正确性。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 论文 ================= -->
+  <section id="publications">
+    <h2><span class="en">Publications</span><span class="zh">论文发表</span></h2>
+    <ul class="pubs">
+      <li class="pub">
+        <div><span class="tag venue">TRETS 2026</span></div>
+        <div>
+          <div class="title">Beyond Surrogate Accuracy: Credibility-Aware LLM-Guided Design Space Exploration for High-Level Synthesis</div>
+          <div class="authors"><b>Yujie Yan</b>, Guanhua Chen, Yukang Chen, Jiaxin Huang, Jianyi Cheng, Keren Zhu</div>
+          <div class="where"><i>ACM Transactions on Reconfigurable Technology and Systems (TRETS)</i>, 2026 · FPT 2026 Journal Track</div>
+          <div class="acts"><span class="tag ok"><span class="en">Accepted</span><span class="zh">已接收</span></span></div>
+        </div>
+      </li>
+      <li class="pub">
+        <div><span class="tag venue">FCCM 2026</span></div>
+        <div>
+          <div class="title">LENS-HLS: LLM-Enhanced Learning-based Design Space Exploration for High-Level Synthesis</div>
+          <div class="authors"><b>Yujie Yan</b>, Guanhua Chen, Keren Zhu</div>
+          <div class="where"><i>IEEE 34th International Symposium on Field-Programmable Custom Computing Machines (FCCM)</i>, Atlanta, GA, USA, 2026, p. 272</div>
+          <div class="acts"><a href="https://doi.org/10.1109/FCCM68464.2026.00060" target="_blank" rel="noopener">DOI</a></div>
+        </div>
+      </li>
+      <li class="pub">
+        <div><span class="tag venue">ISCAS 2026</span></div>
+        <div>
+          <div class="title">HOLMES: Hierarchical Optimization with poLygonal ModEling for Large-Scale AMS Placement</div>
+          <div class="authors">Guanhua Chen, <b>Yujie Yan</b>, Jiahua Liu, Zecheng Xu, Linxi Qiu, Yumao Wu, Zhiang Wang, Changhao Yan, Zhaori Bi, Keren Zhu</div>
+          <div class="where"><i>IEEE International Symposium on Circuits and Systems (ISCAS)</i>, Shanghai, China, 2026, pp. 75–79</div>
+          <div class="acts"><a href="https://doi.org/10.1109/ISCAS66217.2026.11563028" target="_blank" rel="noopener">DOI</a></div>
+        </div>
+      </li>
+      <li class="pub">
+        <div><span class="tag venue">ICFPT 2025</span></div>
+        <div>
+          <div class="title">HOLMES-HLS: Holistic Optimization and Learning-based Multi-model Exploration System for High-level Synthesis</div>
+          <div class="authors"><b>Yujie Yan</b>, Guanhua Chen, Ruiyu Lyu, Huizhen Kuang, Kaiwen Zhou, Hao Chen, Lingli Wang, Keren Zhu</div>
+          <div class="where"><i>International Conference on Field Programmable Technology (ICFPT)</i>, Shanghai, China, 2025, pp. 217–218</div>
+          <div class="acts"><a href="https://doi.org/10.1109/ICFPT67023.2025.00037" target="_blank" rel="noopener">DOI</a></div>
+        </div>
+      </li>
+    </ul>
+  </section>
+
   <!-- ================= 荣誉 ================= -->
   <section id="awards">
     <h2><span class="en">Awards &amp; Honours</span><span class="zh">荣誉与奖项</span></h2>
@@ -525,7 +435,7 @@
       <li><span class="year">2024</span>
         <span><span class="en">Outstanding Student, Fudan University (2023–2024)</span>
           <span class="zh">复旦大学优秀学生（2023–2024 学年）</span></span></li>
-      <li><span class="year">2022–23</span>
+      <li><span class="year">2022–24</span>
         <span><span class="en">Fudan University Academic Scholarship (First Class ×1, Second Class ×2)</span>
           <span class="zh">复旦大学学业奖学金（一等 1 次、二等 2 次）</span></span></li>
       <li><span class="year">2021</span>
